@@ -1,0 +1,392 @@
+[
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/c++ -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/glowbox.dir/src/gamelogic.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/src/gamelogic.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/src/gamelogic.cpp",
+  "output": "CMakeFiles/glowbox.dir/src/gamelogic.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/c++ -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/glowbox.dir/src/main.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/src/main.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/src/main.cpp",
+  "output": "CMakeFiles/glowbox.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/c++ -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/glowbox.dir/src/program.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/src/program.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/src/program.cpp",
+  "output": "CMakeFiles/glowbox.dir/src/program.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/c++ -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/src/sceneGraph.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/src/sceneGraph.cpp",
+  "output": "CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/c++ -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/glfont.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/glfont.cpp",
+  "output": "CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/c++ -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/glutils.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/glutils.cpp",
+  "output": "CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/c++ -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/imageLoader.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/imageLoader.cpp",
+  "output": "CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/c++ -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/shapes.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/shapes.cpp",
+  "output": "CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/c++ -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/timeutils.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/timeutils.cpp",
+  "output": "CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/cc -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include -g -o CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/src/glad.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/src/glad.c",
+  "output": "CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug",
+  "command": "/usr/bin/c++ -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/kleinc/Documents/TDT4230-Assignment-1\\\" -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/glowbox.dir/lib/lodepng/lodepng.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng/lodepng.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng/lodepng.cpp",
+  "output": "CMakeFiles/glowbox.dir/lib/lodepng/lodepng.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/context.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/context.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/context.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/context.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/init.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/init.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/init.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/init.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/input.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/input.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/input.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/input.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/monitor.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/monitor.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/monitor.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/vulkan.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/vulkan.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/vulkan.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/window.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/window.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/window.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/window.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/x11_init.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/x11_init.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/x11_monitor.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/x11_monitor.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/x11_window.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/x11_window.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/xkb_unicode.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/xkb_unicode.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/posix_time.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/posix_time.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/posix_thread.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/posix_thread.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/glx_context.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/glx_context.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/egl_context.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/egl_context.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/osmesa_context.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/osmesa_context.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/glfw/src -g -fPIC -Wall -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/linux_joystick.c",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src/linux_joystick.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Clock.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Clock.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Clock.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Err.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Err.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Err.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Lock.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Lock.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Lock.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Mutex.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Mutex.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Mutex.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Sleep.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Sleep.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Sleep.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/String.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/String.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/String.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Thread.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Thread.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Thread.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/ThreadLocal.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/ThreadLocal.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Time.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Time.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Time.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/FileInputStream.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/FileInputStream.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/MemoryInputStream.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/MemoryInputStream.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp",
+  "output": "lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/ALCheck.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/ALCheck.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/ALCheck.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/AlResource.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/AlResource.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/AlResource.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/AudioDevice.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/AudioDevice.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/Listener.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/Listener.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/Listener.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/Music.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/Music.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/Music.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/Sound.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/Sound.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/Sound.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundBuffer.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundBuffer.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundBufferRecorder.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundBufferRecorder.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/InputSoundFile.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/InputSoundFile.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/OutputSoundFile.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/OutputSoundFile.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundRecorder.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundRecorder.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundSource.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundSource.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundSource.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundStream.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundStream.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundStream.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileFactory.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileFactory.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileReaderWav.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileReaderWav.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL  -Wall -Wextra -Wpedantic -g -std=gnu++14 -fvisibility=hidden -o CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileWriterWav.cpp",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundFileWriterWav.cpp",
+  "output": "lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/fmt",
+  "command": "/usr/bin/c++  -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/fmt.dir/src/format.cc.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/src/format.cc",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/src/format.cc",
+  "output": "lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o"
+},
+{
+  "directory": "/home/kleinc/Documents/TDT4230-Assignment-1/build-debug/lib/fmt",
+  "command": "/usr/bin/c++  -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include  -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/fmt.dir/src/os.cc.o -c /home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/src/os.cc",
+  "file": "/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/src/os.cc",
+  "output": "lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o"
+}
+]
