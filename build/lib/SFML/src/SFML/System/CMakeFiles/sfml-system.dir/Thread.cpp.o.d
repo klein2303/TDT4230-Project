@@ -1,10 +1,10 @@
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Thread.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/System/Thread.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Thread.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/NonCopyable.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Thread.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/NonCopyable.hpp \
  /usr/include/c++/11/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -52,8 +52,8 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/11/bits/std_abs.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Thread.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/ThreadImpl.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Thread.inl \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.hpp \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \

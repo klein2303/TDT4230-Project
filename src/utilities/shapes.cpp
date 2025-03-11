@@ -5,6 +5,7 @@
 #define M_PI 3.14159265359f
 #endif
 
+// eget koordinatsystem
 Mesh cube(glm::vec3 scale, glm::vec2 textureScale, bool tilingTextures, bool inverted, glm::vec3 textureScale3d) {
     glm::vec3 points[8];
     int indices[36];
@@ -203,5 +204,35 @@ Mesh generateSphere(float sphereRadius, int slices, int layers) {
     mesh.normals = normals;
     mesh.indices = indices;
     mesh.textureCoordinates = uvs;
+    return mesh;
+}
+
+
+Mesh grassStraw() {
+    Mesh mesh;
+
+    // Definerer punktene for et enkelt gresstrå
+    glm::vec3 points[6] = {
+        {0.0, 0.0, 0.0}, // Bunn venstre
+        {0.1, 0.0, 0.0}, // Bunn høyre
+        {0.05, 1.0, 0.0}, // Topp midt
+        {0.05, 1.0, 0.0}, // Topp midt (duplisert for å lage to trekanter)
+        {0.1, 0.0, 0.0}, // Bunn høyre (duplisert for å lage to trekanter)
+        {0.0, 0.0, 0.0}  // Bunn venstre (duplisert for å lage to trekanter)
+    };
+
+    // Legger til punktene i mesh
+    for (int i = 0; i < 6; i++) {
+        mesh.vertices.push_back(points[i]);
+        mesh.normals.push_back(glm::vec3(0.0f, 0.0f, 1.0f)); // Normale peker ut av skjermen
+        mesh.textureCoordinates.push_back(glm::vec2(points[i].x, points[i].y)); // Enkle teksturkoordinater
+    }
+
+    // Definerer indeksene for trekantene
+    unsigned int indices[6] = {0, 1, 2, 3, 4, 5};
+    for (int i = 0; i < 6; i++) {
+        mesh.indices.push_back(indices[i]);
+    }
+
     return mesh;
 }

@@ -1,9 +1,9 @@
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Err.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/System/Err.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Err.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Err.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
  /usr/include/c++/11/ostream /usr/include/c++/11/ios \
  /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

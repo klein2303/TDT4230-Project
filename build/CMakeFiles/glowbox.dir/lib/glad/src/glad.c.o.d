@@ -1,5 +1,5 @@
 CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/src/glad.c \
+ /home/kleinc/TDT4230-Project/lib/glad/src/glad.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -51,8 +51,8 @@ CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include/glad/glad.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include/KHR/khrplatform.h \
+ /home/kleinc/TDT4230-Project/lib/glad/include/glad/glad.h \
+ /home/kleinc/TDT4230-Project/lib/glad/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/dlfcn.h \

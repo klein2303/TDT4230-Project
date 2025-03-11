@@ -13,8 +13,6 @@ uniform layout(location = 7) vec4 movingLight;
 uniform layout(location = 9) mat4 viewMatrix;
 uniform layout(location = 10) vec3 cameraPosition;
 
-uniform layout(location = 11) vec3 ballPosition;
-
 uniform layout(location = 12) int is2D;
 
 uniform layout(location = 15) int isNormal;
@@ -84,15 +82,13 @@ void main()
         
         float d = length(lightSources[i].position - fragPosition); //lightDir length
 
-        float ballDir = length(ballPosition - fragPosition);
-
         // bool inShadow = false; for task 3
 
-        vec3 rejection = reject(ballPosition - fragPosition, lightDir);
+        vec3 rejection = reject(fragPosition, lightDir);
         float shadowFactor = 1.0; // 1.0 = full light, 0.0 = fully shadoiwed
         
-        if (dot(lightSources[i].position - fragPosition, ballPosition - fragPosition) > 0 &&
-            length(rejection) < softShadowRadius && d > ballDir) {
+        if (dot(lightSources[i].position - fragPosition, fragPosition) > 0 &&
+            length(rejection) < softShadowRadius ) {
 
             if (length(rejection) < hardShadowRadius) {
                 shadowFactor = 0.0; // Fully shadowed
@@ -117,8 +113,8 @@ void main()
         float dither = dither(textureCoordinates);
 
         // Combine ambient, diffuse and specular 
-        color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
-        // color = vec4(normalizedNormal, 1.0); //To visualize normals
+        // color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
+        color = vec4(0.5, 0.5, 0.5, 1.0); // Set color to gray
 
 
 }

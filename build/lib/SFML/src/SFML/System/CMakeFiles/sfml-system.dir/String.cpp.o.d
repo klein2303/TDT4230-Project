@@ -1,10 +1,10 @@
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/String.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/System/String.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/String.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Utf.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/String.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Utf.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -159,7 +159,7 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o: \
  /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/tuple \
  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Utf.inl \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Utf.inl \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/String.inl \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/String.inl \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h

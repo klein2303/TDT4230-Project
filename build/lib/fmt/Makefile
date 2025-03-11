@@ -57,10 +57,10 @@ RM = /usr/local/lib/python3.10/dist-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kleinc/Documents/TDT4230-Assignment-1
+CMAKE_SOURCE_DIR = /home/kleinc/TDT4230-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kleinc/Documents/TDT4230-Assignment-1/build
+CMAKE_BINARY_DIR = /home/kleinc/TDT4230-Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/Documents/TDT4230-Assignment-1/build/CMakeFiles /home/kleinc/Documents/TDT4230-Assignment-1/build/lib/fmt//CMakeFiles/progress.marks
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/fmt/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/Documents/TDT4230-Assignment-1/build/CMakeFiles 0
+	cd /home/kleinc/TDT4230-Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/TDT4230-Project/build/CMakeFiles /home/kleinc/TDT4230-Project/build/lib/fmt//CMakeFiles/progress.marks
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/fmt/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/TDT4230-Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/fmt/clean
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/fmt/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,17 +148,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/fmt/preinstall
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/fmt/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/fmt/preinstall
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/fmt/preinstall
 .PHONY : preinstall/fast
 
 # Convenience name for target.
 lib/fmt/CMakeFiles/fmt.dir/rule:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/fmt/CMakeFiles/fmt.dir/rule
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/fmt/CMakeFiles/fmt.dir/rule
 .PHONY : lib/fmt/CMakeFiles/fmt.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ fmt: lib/fmt/CMakeFiles/fmt.dir/rule
 
 # fast build rule for target.
 fmt/fast:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/build
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/build
 .PHONY : fmt/fast
 
 src/format.o: src/format.cc.o
@@ -175,7 +175,7 @@ src/format.o: src/format.cc.o
 
 # target to build an object file
 src/format.cc.o:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o
 .PHONY : src/format.cc.o
 
 src/format.i: src/format.cc.i
@@ -183,7 +183,7 @@ src/format.i: src/format.cc.i
 
 # target to preprocess a source file
 src/format.cc.i:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.i
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.i
 .PHONY : src/format.cc.i
 
 src/format.s: src/format.cc.s
@@ -191,7 +191,7 @@ src/format.s: src/format.cc.s
 
 # target to generate assembly for a file
 src/format.cc.s:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.s
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.s
 .PHONY : src/format.cc.s
 
 src/os.o: src/os.cc.o
@@ -199,7 +199,7 @@ src/os.o: src/os.cc.o
 
 # target to build an object file
 src/os.cc.o:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o
 .PHONY : src/os.cc.o
 
 src/os.i: src/os.cc.i
@@ -207,7 +207,7 @@ src/os.i: src/os.cc.i
 
 # target to preprocess a source file
 src/os.cc.i:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.i
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.i
 .PHONY : src/os.cc.i
 
 src/os.s: src/os.cc.s
@@ -215,7 +215,7 @@ src/os.s: src/os.cc.s
 
 # target to generate assembly for a file
 src/os.cc.s:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.s
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.s
 .PHONY : src/os.cc.s
 
 # Help Target

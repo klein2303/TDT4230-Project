@@ -1,4 +1,4 @@
-# Install script for directory: /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src
+# Install script for directory: /home/kleinc/TDT4230-Project/lib/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

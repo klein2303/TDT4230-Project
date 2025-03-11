@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include
+CXX_INCLUDES = -I/home/kleinc/TDT4230-Project/lib/fmt/include
 
 CXX_FLAGS =  -Wall -Wextra -Wpedantic -std=gnu++14
 

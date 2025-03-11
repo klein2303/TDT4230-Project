@@ -1,13 +1,13 @@
 lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundBufferRecorder.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundBufferRecorder.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/SoundBufferRecorder.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/SoundBuffer.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/AlResource.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Time.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/SoundBufferRecorder.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/SoundBuffer.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/AlResource.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Time.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Export.hpp \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -143,10 +143,10 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o: \
  /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/SoundRecorder.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Thread.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/NonCopyable.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Thread.inl \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/SoundRecorder.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Thread.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/NonCopyable.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Thread.inl \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/stl_algo.h \

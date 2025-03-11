@@ -1,9 +1,9 @@
 lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/AudioDevice.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/Audio/AudioDevice.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/AudioDevice.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Vector3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Vector3.inl \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/Audio/AudioDevice.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Vector3.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Vector3.inl \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -133,13 +133,13 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o: \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/ALCheck.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/Audio/ALCheck.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
  /usr/include/AL/al.h /usr/include/AL/alc.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/Listener.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Err.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/Listener.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Err.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Export.hpp \
  /usr/include/c++/11/ostream /usr/include/c++/11/ios \
  /usr/include/c++/11/exception /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \

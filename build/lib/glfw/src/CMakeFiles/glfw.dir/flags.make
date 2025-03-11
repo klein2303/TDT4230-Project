@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/src -I/home/kleinc/Documents/TDT4230-Assignment-1/build/lib/glfw/src
+C_INCLUDES = -I/home/kleinc/TDT4230-Project/lib/glfw/include -I/home/kleinc/TDT4230-Project/lib/glfw/src -I/home/kleinc/TDT4230-Project/build/lib/glfw/src
 
 C_FLAGS = -fPIC -Wall
 

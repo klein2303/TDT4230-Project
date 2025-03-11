@@ -1,11 +1,11 @@
 lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/OutputSoundFile.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/Audio/OutputSoundFile.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/OutputSoundFile.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/NonCopyable.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/OutputSoundFile.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/NonCopyable.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Export.hpp \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -132,10 +132,10 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o: \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/SoundFileWriter.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/SoundFileFactory.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/SoundFileWriter.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/SoundFileFactory.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/SoundFileFactory.inl
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/SoundFileFactory.inl

@@ -57,10 +57,10 @@ RM = /usr/local/lib/python3.10/dist-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kleinc/Documents/TDT4230-Assignment-1
+CMAKE_SOURCE_DIR = /home/kleinc/TDT4230-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kleinc/Documents/TDT4230-Assignment-1/build
+CMAKE_BINARY_DIR = /home/kleinc/TDT4230-Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all:
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/Documents/TDT4230-Assignment-1/build/CMakeFiles /home/kleinc/Documents/TDT4230-Assignment-1/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/TDT4230-Project/build/CMakeFiles /home/kleinc/TDT4230-Project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/Documents/TDT4230-Assignment-1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/TDT4230-Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

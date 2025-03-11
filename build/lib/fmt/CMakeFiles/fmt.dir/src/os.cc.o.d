@@ -1,7 +1,7 @@
 lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/src/os.cc \
+ /home/kleinc/TDT4230-Project/lib/fmt/src/os.cc \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include/fmt/os.h \
+ /home/kleinc/TDT4230-Project/lib/fmt/include/fmt/os.h \
  /usr/include/c++/11/cerrno \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -65,7 +65,7 @@ lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/11/bits/std_abs.h /usr/include/c++/11/cstddef \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include/fmt/format.h \
+ /home/kleinc/TDT4230-Project/lib/fmt/include/fmt/format.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/bits/move.h \
@@ -164,7 +164,7 @@ lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o: \
  /usr/include/c++/11/ext/string_conversions.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include/fmt/core.h \
+ /home/kleinc/TDT4230-Project/lib/fmt/include/fmt/core.h \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
  /usr/include/c++/11/bits/streambuf_iterator.h \

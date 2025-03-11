@@ -1,7 +1,7 @@
 lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/src/format.cc \
+ /home/kleinc/TDT4230-Project/lib/fmt/src/format.cc \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include/fmt/format-inl.h \
+ /home/kleinc/TDT4230-Project/lib/fmt/include/fmt/format-inl.h \
  /usr/include/c++/11/cassert \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -81,7 +81,7 @@ lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include/fmt/format.h \
+ /home/kleinc/TDT4230-Project/lib/fmt/include/fmt/format.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/bits/move.h \
@@ -174,7 +174,7 @@ lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include/fmt/core.h \
+ /home/kleinc/TDT4230-Project/lib/fmt/include/fmt/core.h \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
  /usr/include/c++/11/bits/streambuf_iterator.h \
  /usr/include/c++/11/streambuf /usr/include/c++/11/bits/ios_base.h \

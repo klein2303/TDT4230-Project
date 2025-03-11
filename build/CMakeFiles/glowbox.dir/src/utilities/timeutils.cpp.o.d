@@ -1,5 +1,5 @@
 CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/timeutils.cpp \
+ /home/kleinc/TDT4230-Project/src/utilities/timeutils.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -41,4 +41,4 @@ CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o: \
  /usr/include/c++/11/ext/numeric_traits.h \
  /usr/include/c++/11/bits/cpp_type_traits.h \
  /usr/include/c++/11/ext/type_traits.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/timeutils.h
+ /home/kleinc/TDT4230-Project/src/utilities/timeutils.h

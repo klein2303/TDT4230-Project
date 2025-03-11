@@ -1,4 +1,4 @@
-# Install script for directory: /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System
+# Install script for directory: /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/System
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,6 +43,6 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/kleinc/Documents/TDT4230-Assignment-1/build/lib/SFML/lib/libsfml-system.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/kleinc/TDT4230-Project/build/lib/SFML/lib/libsfml-system.a")
 endif()
 

@@ -1,9 +1,8 @@
 CMakeFiles/glowbox.dir/src/main.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/main.cpp \
- /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/window.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include/glad/glad.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include/KHR/khrplatform.h \
+ /home/kleinc/TDT4230-Project/src/main.cpp /usr/include/stdc-predef.h \
+ /home/kleinc/TDT4230-Project/src/utilities/window.hpp \
+ /home/kleinc/TDT4230-Project/lib/glad/include/glad/glad.h \
+ /home/kleinc/TDT4230-Project/lib/glad/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -128,16 +127,16 @@ CMakeFiles/glowbox.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/program.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include/GLFW/glfw3.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/imageLoader.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng/lodepng.h \
- /usr/include/string.h /usr/include/strings.h /usr/include/c++/11/vector \
+ /home/kleinc/TDT4230-Project/src/program.hpp \
+ /home/kleinc/TDT4230-Project/lib/glfw/include/GLFW/glfw3.h \
+ /home/kleinc/TDT4230-Project/src/utilities/imageLoader.hpp \
+ /home/kleinc/TDT4230-Project/lib/lodepng/lodepng.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh/arrrgh.hpp \
+ /home/kleinc/TDT4230-Project/lib/arrrgh/arrrgh.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/stl_algo.h \

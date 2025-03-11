@@ -1,8 +1,8 @@
 CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/glutils.cpp \
+ /home/kleinc/TDT4230-Project/src/utilities/glutils.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include/glad/glad.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include/KHR/khrplatform.h \
+ /home/kleinc/TDT4230-Project/lib/glad/include/glad/glad.h \
+ /home/kleinc/TDT4230-Project/lib/glad/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -18,8 +18,8 @@ CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/program.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include/GLFW/glfw3.h \
+ /home/kleinc/TDT4230-Project/src/program.hpp \
+ /home/kleinc/TDT4230-Project/lib/glfw/include/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -129,15 +129,15 @@ CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o: \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/window.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/glutils.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/src/utilities/mesh.h \
+ /home/kleinc/TDT4230-Project/src/utilities/window.hpp \
+ /home/kleinc/TDT4230-Project/src/utilities/glutils.h \
+ /home/kleinc/TDT4230-Project/src/utilities/mesh.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/glm.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/detail/_fixes.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/glm.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/detail/_fixes.hpp \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -148,10 +148,10 @@ CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/detail/setup.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/detail/setup.hpp \
  /usr/include/c++/11/cassert /usr/include/assert.h \
  /usr/include/c++/11/cstddef \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/detail/../simd/platform.h \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/detail/../simd/platform.h \
  /usr/include/c++/11/climits \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -163,137 +163,137 @@ CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/11/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /usr/include/c++/11/limits \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/fwd.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/detail/qualifier.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/detail/setup.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/vec2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_bool2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/type_vec2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/type_vec2.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/./compute_vector_relational.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/./setup.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_bool2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_float2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_float2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_double2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_double2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_int2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_int2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_uint2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_uint2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/vec3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_bool3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/type_vec3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/type_vec3.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_bool3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_float3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_float3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_double3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_double3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_int3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_int3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_uint3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_uint3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/vec4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_bool4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/type_vec4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/type_vec4.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_bool4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_float4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_float4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_double4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_double4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/setup.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_int4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_int4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_uint4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/vector_uint4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/mat2x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/matrix_double2x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/type_mat2x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/type_mat2x2.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../matrix.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/setup.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../mat2x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double2x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x3.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double2x3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float2x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float2x3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../mat2x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double2x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x4.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double2x4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float2x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float2x4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../mat3x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x2.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../mat3x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x3.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../mat3x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x4.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../mat4x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x2.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../mat4x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x3.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x3_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../mat4x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x4.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x4.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x4_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/func_matrix.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../geometric.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/func_geometric.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../exponential.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/type_vec1.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/type_vec1.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/func_exponential.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/../vector_relational.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/../detail/setup.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/../detail/func_vector_relational.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/_vectorize.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../common.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/_fixes.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/func_common.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/compute_common.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/setup.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/matrix_double2x2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/matrix_float2x2.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/./ext/matrix_float2x2_precision.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/trigonometric.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/detail/func_trigonometric.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/packing.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/detail/func_packing.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/detail/type_half.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/detail/type_half.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/integer.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/glm/glm/detail/func_integer.inl
+ /home/kleinc/TDT4230-Project/lib/glm/glm/fwd.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/detail/qualifier.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/detail/setup.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/vec2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_bool2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/type_vec2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/type_vec2.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/./compute_vector_relational.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/./setup.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_bool2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_float2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_float2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_double2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_double2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_int2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_int2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_uint2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_uint2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/vec3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_bool3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/type_vec3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/type_vec3.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_bool3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_float3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_float3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_double3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_double3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_int3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_int3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_uint3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_uint3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/vec4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_bool4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/type_vec4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/type_vec4.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_bool4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_float4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_float4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_double4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_double4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/setup.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_int4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_int4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_uint4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/vector_uint4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/mat2x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/matrix_double2x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/type_mat2x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/type_mat2x2.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../matrix.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/setup.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../mat2x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double2x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x3.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double2x3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float2x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float2x3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../mat2x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double2x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x4.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double2x4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float2x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float2x4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../mat3x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x2.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../mat3x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x3.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../mat3x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x4.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double3x4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float3x4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../mat4x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x2.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../mat4x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x3.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x3.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x3_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../mat4x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x4.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_double4x4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x4.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/.././ext/matrix_float4x4_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/func_matrix.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../geometric.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/func_geometric.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../exponential.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/type_vec1.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/type_vec1.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/func_exponential.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/../vector_relational.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/../detail/setup.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/../detail/func_vector_relational.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/_vectorize.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../common.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/_fixes.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/func_common.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/compute_common.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/../detail/../detail/../detail/../detail/setup.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/matrix_double2x2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/matrix_float2x2.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/./ext/matrix_float2x2_precision.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/trigonometric.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/detail/func_trigonometric.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/packing.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/detail/func_packing.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/detail/type_half.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/detail/type_half.inl \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/integer.hpp \
+ /home/kleinc/TDT4230-Project/lib/glm/glm/detail/func_integer.inl

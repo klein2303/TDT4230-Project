@@ -1,4 +1,4 @@
-# Install script for directory: /home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw
+# Install script for directory: /home/kleinc/TDT4230-Project/lib/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kleinc/Documents/TDT4230-Assignment-1/build/lib/glfw/src/cmake_install.cmake")
+  include("/home/kleinc/TDT4230-Project/build/lib/glfw/src/cmake_install.cmake")
 
 endif()
 

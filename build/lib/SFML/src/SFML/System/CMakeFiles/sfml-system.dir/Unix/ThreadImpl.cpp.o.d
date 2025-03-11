@@ -1,10 +1,10 @@
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/ThreadImpl.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/NonCopyable.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/NonCopyable.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Export.hpp \
  /usr/include/pthread.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -44,7 +44,7 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Thread.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Thread.hpp \
  /usr/include/c++/11/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -64,7 +64,7 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
  /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/11/bits/std_abs.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Thread.inl \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Thread.inl \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/c++/11/bits/stringfwd.h \

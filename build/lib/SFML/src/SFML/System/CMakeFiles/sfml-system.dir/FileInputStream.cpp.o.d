@@ -1,11 +1,11 @@
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/FileInputStream.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/System/FileInputStream.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/FileInputStream.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/InputStream.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/NonCopyable.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/FileInputStream.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/InputStream.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/NonCopyable.hpp \
  /usr/include/c++/11/cstdio \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

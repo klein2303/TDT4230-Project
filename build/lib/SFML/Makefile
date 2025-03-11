@@ -57,10 +57,10 @@ RM = /usr/local/lib/python3.10/dist-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kleinc/Documents/TDT4230-Assignment-1
+CMAKE_SOURCE_DIR = /home/kleinc/TDT4230-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kleinc/Documents/TDT4230-Assignment-1/build
+CMAKE_BINARY_DIR = /home/kleinc/TDT4230-Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/Documents/TDT4230-Assignment-1/build/CMakeFiles /home/kleinc/Documents/TDT4230-Assignment-1/build/lib/SFML//CMakeFiles/progress.marks
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SFML/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/Documents/TDT4230-Assignment-1/build/CMakeFiles 0
+	cd /home/kleinc/TDT4230-Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/TDT4230-Project/build/CMakeFiles /home/kleinc/TDT4230-Project/build/lib/SFML//CMakeFiles/progress.marks
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SFML/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kleinc/TDT4230-Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SFML/clean
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SFML/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,12 +148,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SFML/preinstall
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SFML/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kleinc/Documents/TDT4230-Assignment-1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SFML/preinstall
+	cd /home/kleinc/TDT4230-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/SFML/preinstall
 .PHONY : preinstall/fast
 
 # Help Target

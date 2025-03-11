@@ -3,15 +3,15 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_DEFINES = -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\"/home/kleinc/Documents/TDT4230-Assignment-1\" -DSFML_STATIC
+C_DEFINES = -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\"/home/kleinc/TDT4230-Project\" -DSFML_STATIC
 
-C_INCLUDES = -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include
+C_INCLUDES = -I/home/kleinc/TDT4230-Project/src -I/home/kleinc/TDT4230-Project/lib/glad/include -I/home/kleinc/TDT4230-Project/lib/glfw/include -I/home/kleinc/TDT4230-Project/lib/lodepng -I/home/kleinc/TDT4230-Project/lib/glm -I/home/kleinc/TDT4230-Project/lib/stb -I/home/kleinc/TDT4230-Project/lib/arrrgh -I/home/kleinc/TDT4230-Project/lib/SFML/include -I/home/kleinc/TDT4230-Project/lib/fmt/include
 
 C_FLAGS = 
 
-CXX_DEFINES = -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\"/home/kleinc/Documents/TDT4230-Assignment-1\" -DSFML_STATIC
+CXX_DEFINES = -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\"/home/kleinc/TDT4230-Project\" -DSFML_STATIC
 
-CXX_INCLUDES = -I/home/kleinc/Documents/TDT4230-Assignment-1/src -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glad/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glfw/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/glm -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/stb -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/arrrgh -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/fmt/include
+CXX_INCLUDES = -I/home/kleinc/TDT4230-Project/src -I/home/kleinc/TDT4230-Project/lib/glad/include -I/home/kleinc/TDT4230-Project/lib/glfw/include -I/home/kleinc/TDT4230-Project/lib/lodepng -I/home/kleinc/TDT4230-Project/lib/glm -I/home/kleinc/TDT4230-Project/lib/stb -I/home/kleinc/TDT4230-Project/lib/arrrgh -I/home/kleinc/TDT4230-Project/lib/SFML/include -I/home/kleinc/TDT4230-Project/lib/fmt/include
 
 CXX_FLAGS =  -Wall -Wextra -Wpedantic -std=gnu++14
 

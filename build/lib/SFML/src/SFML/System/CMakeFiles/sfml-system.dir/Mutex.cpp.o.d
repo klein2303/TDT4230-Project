@@ -1,11 +1,11 @@
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Mutex.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/System/Mutex.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Mutex.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/NonCopyable.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/System/Unix/MutexImpl.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Mutex.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/NonCopyable.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/System/Unix/MutexImpl.hpp \
  /usr/include/pthread.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

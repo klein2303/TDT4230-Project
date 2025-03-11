@@ -1,8 +1,7 @@
 CMakeFiles/glowbox.dir/lib/lodepng/lodepng.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng/lodepng.cpp \
+ /home/kleinc/TDT4230-Project/lib/lodepng/lodepng.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/lodepng/lodepng.h \
- /usr/include/string.h \
+ /home/kleinc/TDT4230-Project/lib/lodepng/lodepng.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

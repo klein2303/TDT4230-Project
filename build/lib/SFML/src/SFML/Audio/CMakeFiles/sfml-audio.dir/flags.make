@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC
 
-CXX_INCLUDES = -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include -I/home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src -I/usr/include/AL
+CXX_INCLUDES = -I/home/kleinc/TDT4230-Project/lib/SFML/include -I/home/kleinc/TDT4230-Project/lib/SFML/src -I/usr/include/AL
 
 CXX_FLAGS =  -Wall -Wextra -Wpedantic -std=gnu++14 -fvisibility=hidden
 

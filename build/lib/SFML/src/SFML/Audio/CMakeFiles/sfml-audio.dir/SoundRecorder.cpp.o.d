@@ -1,13 +1,13 @@
 lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/SoundRecorder.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundRecorder.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/SoundRecorder.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/AlResource.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Thread.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/NonCopyable.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/SoundRecorder.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/AlResource.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Thread.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/NonCopyable.hpp \
  /usr/include/c++/11/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -55,8 +55,8 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/11/bits/std_abs.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Thread.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Time.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Thread.inl \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Time.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/c++/11/bits/functexcept.h \
  /usr/include/c++/11/bits/exception_defines.h \
@@ -140,18 +140,18 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/AudioDevice.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Vector3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Vector3.inl \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/Audio/AudioDevice.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Vector3.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Vector3.inl \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/ALCheck.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/Audio/ALCheck.hpp \
  /usr/include/AL/al.h /usr/include/AL/alc.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Sleep.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Err.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Sleep.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Err.hpp \
  /usr/include/c++/11/ostream /usr/include/c++/11/ios \
  /usr/include/c++/11/exception /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \

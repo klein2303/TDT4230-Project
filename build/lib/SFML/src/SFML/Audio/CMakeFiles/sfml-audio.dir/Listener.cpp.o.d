@@ -1,12 +1,12 @@
 lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o: \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/Listener.cpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/Audio/Listener.cpp \
  /usr/include/stdc-predef.h \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/Listener.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Audio/Export.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/Config.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Vector3.hpp \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/include/SFML/System/Vector3.inl \
- /home/kleinc/Documents/TDT4230-Assignment-1/lib/SFML/src/SFML/Audio/AudioDevice.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/Listener.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/Export.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Vector3.hpp \
+ /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Vector3.inl \
+ /home/kleinc/TDT4230-Project/lib/SFML/src/SFML/Audio/AudioDevice.hpp \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
