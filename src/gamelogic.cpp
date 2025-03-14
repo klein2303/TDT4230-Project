@@ -121,6 +121,7 @@ GLuint textureID(PNGImage *image) {
     return textureID;
 }
 
+// FIKS DET SOM PEDER ENDRA PÅ SOM STÅR PÅ BLACKBOARD
 
 
 void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
@@ -141,7 +142,9 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     // Create meshes
     Mesh pad = cube(padDimensions, glm::vec2(30, 40), true);
     // Mesh box = cube(boxDimensions, glm::vec2(90), true, true);
-    Mesh sphere = generateSphere(1.0, 40, 40);
+    Mesh sphere = generateSphere(1.0, 40, 40); //KAN FJERNES
+
+    // #Lag mesh for gress
 
     // Mesh text = generateTextGeometryBuffer("testtestest", 39./29., 30*29.);
     // unsigned int textVAO = generateBuffer(text);
@@ -152,6 +155,8 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     // Fill buffers
     // unsigned int boxVAO  = generateBuffer(box);
     unsigned int padVAO  = generateBuffer(pad);
+
+    // # Lag VAO for gress
 
     // Construct scene
     rootNode = createSceneNode();
@@ -167,6 +172,9 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     addChild(rootNode, light2);
     // addChild(rootNode, boxNode);
     addChild(rootNode, padNode);
+
+    // # add gress på padNode for at den skal følge paden når paden beveger seg
+
     // addChild(rootNode, textNode);
 
     // boxNode->vertexArrayObjectID  = boxVAO;
@@ -178,6 +186,8 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
 
     padNode->vertexArrayObjectID  = padVAO;
     padNode->VAOIndexCount        = pad.indices.size();
+
+    // # Sett opp gressNode på tilsvarende måte som padNode
     
     // textNode->vertexArrayObjectID = textVAO;
     // textNode->VAOIndexCount       = text.indices.size();
@@ -326,6 +336,10 @@ void renderNode(SceneNode* node) {
         case POINT_LIGHT: 
         break;
         case SPOT_LIGHT: break;
+
+        case GRASS: 
+        
+        break;
     }
 
     for(SceneNode* child : node->children) {

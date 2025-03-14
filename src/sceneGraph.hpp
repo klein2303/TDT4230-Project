@@ -79,5 +79,6 @@ void printNode(SceneNode* node);
 int totalChildren(SceneNode* parent);
 SceneNode* createLightNode(int lightID);
 SceneNode* createTextureNode(int textureID);
+SceneNode* createGrassNode(int textureID);
 
 // For more details, see SceneGraph.cpp.
