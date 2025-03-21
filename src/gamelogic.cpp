@@ -39,6 +39,7 @@ SceneNode* padNode;
 SceneNode* light1;
 SceneNode* light2;
 SceneNode* movingLightNode;
+SceneNode* grassNode;
 
 double ballRadius = 3.0f;
 
@@ -53,7 +54,7 @@ Gloom::Shader* grassShader;
 sf::Sound* sound;
 
 // const glm::vec3 boxDimensions(180, 90, 90);
-const glm::vec3 padDimensions(20, 0, 100);
+const glm::vec3 padDimensions(40, 0, 100);
 
 
 CommandLineOptions options;
@@ -121,8 +122,6 @@ GLuint textureID(PNGImage *image) {
     return textureID;
 }
 
-// FIKS DET SOM PEDER ENDRA PÅ SOM STÅR PÅ BLACKBOARD
-
 
 void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
 
@@ -135,22 +134,23 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     shader->makeBasicShader("../res/shaders/simple.vert", "../res/shaders/simple.frag");
     shader->activate();
 
-    // grassShader = new Gloom::Shader();
-    // grassShader->makeBasicShader("../res/shaders/grassShader.vert", "../res/shaders/simple.frag");
-    // grassShader->activate();
+    grassShader = new Gloom::Shader();
+    grassShader->makeBasicShader("../res/shaders/grassShader.vert", "../res/shaders/simple.frag");
+    
 
     // Create meshes
     Mesh pad = cube(padDimensions, glm::vec2(30, 40), true);
     // Mesh box = cube(boxDimensions, glm::vec2(90), true, true);
-    Mesh sphere = generateSphere(1.0, 40, 40); //KAN FJERNES
+    // Mesh sphere = generateSphere(1.0, 40, 40); //KAN FJERNES
 
     // #Lag mesh for gress
+    Mesh grass = grassStraw();
 
     // Mesh text = generateTextGeometryBuffer("testtestest", 39./29., 30*29.);
     // unsigned int textVAO = generateBuffer(text);
 
     // Create 2D geometry node
-    SceneNode* textNode = createTextureNode(textureID(&charmap));
+    SceneNode* textNode = createTextureNode(textureID(&charmap), shader);
 
     // Fill buffers
     // unsigned int boxVAO  = generateBuffer(box);
@@ -158,15 +158,19 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
 
     // # Lag VAO for gress
 
+    unsigned int grassVAO = generateBuffer(grass);
+
     // Construct scene
-    rootNode = createSceneNode();
+    rootNode = createSceneNode(shader);
     // boxNode  = createSceneNode();
-    padNode  = createSceneNode();
+    padNode  = createSceneNode(shader);
+
+    grassNode = createSceneNode(grassShader);
 
     
-    light1 = createLightNode(0);
-    light2 = createLightNode(1);
-    movingLightNode = createLightNode(2);
+    light1 = createLightNode(0, shader);
+    light2 = createLightNode(1, shader);
+    movingLightNode = createLightNode(2, shader);
 
     addChild(rootNode, light1);
     addChild(rootNode, light2);
@@ -174,6 +178,7 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     addChild(rootNode, padNode);
 
     // # add gress på padNode for at den skal følge paden når paden beveger seg
+    addChild(padNode, grassNode);
 
     // addChild(rootNode, textNode);
 
@@ -188,6 +193,16 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     padNode->VAOIndexCount        = pad.indices.size();
 
     // # Sett opp gressNode på tilsvarende måte som padNode
+    grassNode->vertexArrayObjectID = grassVAO;
+    grassNode->VAOIndexCount = grass.indices.size();
+    grassNode->nodeType = GRASS;
+
+    // Sett posisjonen til paden
+    padNode->position = glm::vec3(0.0f, 0.0f, 0.0f); // Juster posisjonen etter behov
+
+    // Sett posisjonen til gresset
+    grassNode->position = glm::vec3(0.0f, 2.0f, -13.0f); // Juster posisjonen etter behov
+
     
     // textNode->vertexArrayObjectID = textVAO;
     // textNode->VAOIndexCount       = text.indices.size();
@@ -296,7 +311,14 @@ void updateNodeTransformations(SceneNode* node, glm::mat4 transformationThusFar,
 
 }
 
+
+
 void renderNode(SceneNode* node) {
+    // activate shader that matches the object
+    node->shader->activate();
+
+    // HUSK Å FIKSE SLIK AT ALLE TING TAR INN SHADER
+
     glUniformMatrix4fv(3, 1, GL_FALSE, glm::value_ptr(node->currentTransformationMatrix));
     glUniformMatrix4fv(4, 1, GL_FALSE, glm::value_ptr(node->modelMatrix));
     glm::mat3 normalMatrix = glm::transpose(glm::inverse(glm::mat3(node->modelMatrix)));
@@ -338,7 +360,12 @@ void renderNode(SceneNode* node) {
         case SPOT_LIGHT: break;
 
         case GRASS: 
-        
+        if(node->vertexArrayObjectID != -1) {
+            glBindVertexArray(node->vertexArrayObjectID);
+            // Sett padens posisjon som uniform
+            glUniform3fv(14, 1, glm::value_ptr(padNode->position));
+            glDrawArraysInstanced(GL_TRIANGLES, 0, node->VAOIndexCount, 1000);
+            }
         break;
     }
 

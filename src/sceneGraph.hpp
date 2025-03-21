@@ -13,12 +13,14 @@
 #include <chrono>
 #include <fstream>
 
+#include <utilities/shader.hpp>
+
 enum SceneNodeType {
 	GEOMETRY, POINT_LIGHT, SPOT_LIGHT, GEOMETRY_2D, NORMAL_MAPPED_GEOMETRY, GRASS
 };
 
 struct SceneNode {
-	SceneNode() {
+	SceneNode(Gloom::Shader* shader) {
 		position = glm::vec3(0, 0, 0);
 		rotation = glm::vec3(0, 0, 0);
 		scale = glm::vec3(1, 1, 1);
@@ -37,6 +39,8 @@ struct SceneNode {
 		normal_mapped_textureID = -1;
 
 		is2D = 0;
+
+		this->shader = shader;
 	}
 
 	// A list of all children that belong to this node.
@@ -71,14 +75,16 @@ struct SceneNode {
 	int is2D;
 
 	glm::vec4 lightPos;
+
+	Gloom::Shader* shader;
 };
 
-SceneNode* createSceneNode();
+SceneNode* createSceneNode(Gloom::Shader* shader);
 void addChild(SceneNode* parent, SceneNode* child);
 void printNode(SceneNode* node);
 int totalChildren(SceneNode* parent);
-SceneNode* createLightNode(int lightID);
-SceneNode* createTextureNode(int textureID);
-SceneNode* createGrassNode(int textureID);
+SceneNode* createLightNode(int lightID, Gloom::Shader* shader);
+SceneNode* createTextureNode(int textureID, Gloom::Shader* shader);
+SceneNode* createGrassNode();
 
 // For more details, see SceneGraph.cpp.

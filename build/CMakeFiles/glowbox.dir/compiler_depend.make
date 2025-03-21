@@ -1465,6 +1465,8 @@ CMakeFiles/glowbox.dir/src/program.cpp.o: /home/kleinc/TDT4230-Project/src/progr
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h
 
 CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o: /home/kleinc/TDT4230-Project/src/sceneGraph.cpp \
+  /home/kleinc/TDT4230-Project/lib/glad/include/KHR/khrplatform.h \
+  /home/kleinc/TDT4230-Project/lib/glad/include/glad/glad.h \
   /home/kleinc/TDT4230-Project/lib/glm/glm/detail/type_mat2x3.hpp \
   /home/kleinc/TDT4230-Project/lib/glm/glm/detail/type_mat2x3.inl \
   /home/kleinc/TDT4230-Project/lib/glm/glm/detail/type_mat2x4.hpp \
@@ -1654,13 +1656,21 @@ CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o: /home/kleinc/TDT4230-Project/src/sc
   /home/kleinc/TDT4230-Project/lib/glm/glm/vec3.hpp \
   /home/kleinc/TDT4230-Project/lib/glm/glm/vec4.hpp \
   /home/kleinc/TDT4230-Project/src/sceneGraph.hpp \
+  /home/kleinc/TDT4230-Project/src/utilities/shader.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/backward/binders.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/align.h \
   /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/bits/allocator.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/bits/basic_ios.h \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/basic_string.h \
@@ -1680,6 +1690,7 @@ CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o: /home/kleinc/TDT4230-Project/src/sc
   /usr/include/c++/11/bits/functexcept.h \
   /usr/include/c++/11/bits/functional_hash.h \
   /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/ios_base.h \
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/locale_classes.h \
@@ -1697,6 +1708,10 @@ CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o: /home/kleinc/TDT4230-Project/src/sc
   /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/bits/ptr_traits.h \
   /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/stl_bvector.h \
@@ -1707,12 +1722,16 @@ CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o: /home/kleinc/TDT4230-Project/src/sc
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_stack.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/streambuf.tcc \
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/cassert \
@@ -1735,8 +1754,10 @@ CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o: /home/kleinc/TDT4230-Project/src/sc
   /usr/include/c++/11/debug/debug.h \
   /usr/include/c++/11/deque \
   /usr/include/c++/11/exception \
+  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/ext/alloc_traits.h \
   /usr/include/c++/11/ext/atomicity.h \
+  /usr/include/c++/11/ext/concurrence.h \
   /usr/include/c++/11/ext/new_allocator.h \
   /usr/include/c++/11/ext/numeric_traits.h \
   /usr/include/c++/11/ext/string_conversions.h \
@@ -1748,6 +1769,7 @@ CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o: /home/kleinc/TDT4230-Project/src/sc
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/limits \
+  /usr/include/c++/11/memory \
   /usr/include/c++/11/new \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ratio \
@@ -1756,8 +1778,10 @@ CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o: /home/kleinc/TDT4230-Project/src/sc
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/string \
   /usr/include/c++/11/system_error \
+  /usr/include/c++/11/tuple \
   /usr/include/c++/11/type_traits \
   /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/utility \
   /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \

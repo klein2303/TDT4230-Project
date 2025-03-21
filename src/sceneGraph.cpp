@@ -1,8 +1,9 @@
 #include "sceneGraph.hpp"
 #include <iostream>
+#include <utilities/shader.hpp>
 
-SceneNode* createSceneNode() {
-	return new SceneNode();
+SceneNode* createSceneNode(Gloom::Shader* shader) {
+	return new SceneNode(shader);
 }
 
 // Add a child node to its parent's list of children
@@ -37,15 +38,15 @@ void printNode(SceneNode* node) {
 		node->lightID);
 }
 
-SceneNode* createLightNode(int lightID) {
-    SceneNode* node = createSceneNode();
+SceneNode* createLightNode(int lightID, Gloom::Shader* shader) {
+    SceneNode* node = createSceneNode(shader);
     node->nodeType = POINT_LIGHT; // Sett nodetype til POINT_LIGHT
     node->lightID = lightID; // Sett lys-ID
     return node;
 }
 
-SceneNode* createTextureNode(int textureID) {
-	SceneNode* node = createSceneNode();
+SceneNode* createTextureNode(int textureID, Gloom::Shader* shader) {
+	SceneNode* node = createSceneNode(shader);
 	node->nodeType = GEOMETRY_2D; // Sett nodetype til GEOMETRY_2D
 	node->textureID = textureID; // Sett tekstur-ID
 	node->is2D = 1; // Sett is2D til 1
@@ -53,3 +54,8 @@ SceneNode* createTextureNode(int textureID) {
 }
 
 // # Lag createGrassNode
+// SceneNode* createGrassNode() {
+// 	SceneNode* node = createSceneNode();
+// 	node->nodeType = GRASS; // Sett nodetype til GRASS
+// 	return node;
+// };

@@ -379,7 +379,24 @@ CMakeFiles/glowbox.dir/src/program.cpp.o: \
  /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
- /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/iostream \
+ /usr/include/c++/11/bits/fstream.tcc \
+ /home/kleinc/TDT4230-Project/src/utilities/shader.hpp \
+ /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
+ /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/ext/concurrence.h \
+ /usr/include/c++/11/bits/shared_ptr_atomic.h \
+ /usr/include/c++/11/bits/atomic_base.h \
+ /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/11/backward/auto_ptr.h /usr/include/c++/11/iostream \
  /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio.hpp \
  /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System.hpp \
  /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Config.hpp \
@@ -396,20 +413,15 @@ CMakeFiles/glowbox.dir/src/program.cpp.o: \
  /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Sleep.hpp \
  /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/String.hpp \
  /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Utf.hpp \
- /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
- /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
- /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h /usr/include/c++/11/locale \
  /usr/include/c++/11/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/11/bits/locale_facets_nonio.tcc \
  /usr/include/c++/11/bits/locale_conv.h \
- /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/array /usr/include/c++/11/bits/invoke.h \
  /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/Utf.inl \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
  /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/System/String.inl \
@@ -433,7 +445,6 @@ CMakeFiles/glowbox.dir/src/program.cpp.o: \
  /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/Sound.hpp \
  /home/kleinc/TDT4230-Project/lib/SFML/include/SFML/Audio/SoundBuffer.hpp \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
- /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
  /usr/include/c++/11/bits/erase_if.h \
@@ -446,16 +457,4 @@ CMakeFiles/glowbox.dir/src/program.cpp.o: \
  /home/kleinc/TDT4230-Project/src/utilities/shapes.h \
  /home/kleinc/TDT4230-Project/src/utilities/mesh.h \
  /home/kleinc/TDT4230-Project/src/utilities/glutils.h \
- /home/kleinc/TDT4230-Project/src/utilities/shader.hpp \
- /usr/include/c++/11/memory \
- /usr/include/c++/11/bits/stl_raw_storage_iter.h \
- /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
- /usr/include/c++/11/bits/shared_ptr.h \
- /usr/include/c++/11/bits/shared_ptr_base.h \
- /usr/include/c++/11/bits/allocated_ptr.h \
- /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/ext/concurrence.h \
- /usr/include/c++/11/bits/shared_ptr_atomic.h \
- /usr/include/c++/11/bits/atomic_base.h \
- /usr/include/c++/11/bits/atomic_lockfree_defines.h \
- /usr/include/c++/11/backward/auto_ptr.h \
  /home/kleinc/TDT4230-Project/src/utilities/timeutils.h

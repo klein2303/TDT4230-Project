@@ -109,12 +109,12 @@ void main()
             specular += attenuation * specIntensity * lightSources[i].color * shadowFactor;
         }
 
-        }
-        float dither = dither(textureCoordinates);
+    }
+    float dither = dither(textureCoordinates);
 
-        // Combine ambient, diffuse and specular 
-        // color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
-        color = vec4(0.5, 0.5, 0.5, 1.0); // Set color to gray
+    // Combine ambient, diffuse and specular 
+    // color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
+    color = vec4(0.5, 0.5, 0.5, 1.0); // Set color to gray
 
 
 }

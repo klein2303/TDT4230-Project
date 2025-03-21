@@ -188,7 +188,7 @@ Mesh generateSphere(float sphereRadius, int slices, int layers) {
             indices.emplace_back(i + 5);
 
             for (int j = 0; j < 6; j++) {
-                glm::vec3 vertex = vertices.at(i+j);
+                glm::vec3 vertex = vertices.at(i+j) / sphereRadius;
                 uvs.emplace_back(
                     0.5 + (glm::atan(vertex.z, -vertex.x)/(2.0*M_PI)),
                     0.5 + (glm::asin(vertex.y)/M_PI)
@@ -212,26 +212,24 @@ Mesh grassStraw() {
     Mesh mesh;
 
     // Definerer punktene for et enkelt gresstrå
-    glm::vec3 points[6] = {
+    glm::vec3 points[4] = {
         {0.0, 0.0, 0.0}, // Bunn venstre
-        {0.1, 0.0, 0.0}, // Bunn høyre
-        {0.05, 1.0, 0.0}, // Topp midt
-        {0.05, 1.0, 0.0}, // Topp midt (duplisert for å lage to trekanter)
-        {0.1, 0.0, 0.0}, // Bunn høyre (duplisert for å lage to trekanter)
-        {0.0, 0.0, 0.0}  // Bunn venstre (duplisert for å lage to trekanter)
+        {0.05, 0.0, 0.0}, // Bunn høyre
+        {0.025, 0.25, 0.0}, // Midt
+        {0.025, 0.35, 0.0}  // Topp
     };
+
+    // Definerer indeksene for trekantene
+    unsigned int indices[6] = {0, 1, 2, 0, 2, 3};
+    for (int i = 0; i < 6; i++) {
+        mesh.indices.push_back(indices[i]);
+    }
 
     // Legger til punktene i mesh
     for (int i = 0; i < 6; i++) {
-        mesh.vertices.push_back(points[i]);
+        mesh.vertices.push_back(points[indices[i]]);
         mesh.normals.push_back(glm::vec3(0.0f, 0.0f, 1.0f)); // Normale peker ut av skjermen
         mesh.textureCoordinates.push_back(glm::vec2(points[i].x, points[i].y)); // Enkle teksturkoordinater
-    }
-
-    // Definerer indeksene for trekantene
-    unsigned int indices[6] = {0, 1, 2, 3, 4, 5};
-    for (int i = 0; i < 6; i++) {
-        mesh.indices.push_back(indices[i]);
     }
 
     return mesh;
