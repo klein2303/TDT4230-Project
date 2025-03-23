@@ -23,6 +23,8 @@ uniform layout(location = 15) int isNormal;
 
 uniform layout(location = 14) vec3 padPosition;
 
+uniform layout (location = 16) int isGrassStraw;
+
 out layout(location = 0) vec3 normal_out;
 out layout(location = 1) vec2 textureCoordinates_out;
 out layout(location = 2) vec3 fragPosition;

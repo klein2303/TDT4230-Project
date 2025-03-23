@@ -17,6 +17,8 @@ uniform layout(location = 12) int is2D;
 
 uniform layout(location = 15) int isNormal;
 
+uniform layout (location = 16) int isGrassStraw;
+
 uniform float ballRadius;
 
 in layout(location = 2) vec3 fragPosition;
@@ -56,6 +58,12 @@ void main()
         normalizedNormal = normalize(normal);
 
     }
+
+    if(isGrassStraw == 1){
+        color = vec4(0.0, 1.0, 0.0, 1.0);
+        return;
+    }
+
     vec3 ambient = vec3(0.1, 0.1, 0.1);
 
     float shininess = 32.0; // Higher values = shinier surface

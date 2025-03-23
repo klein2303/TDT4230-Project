@@ -248,6 +248,7 @@ void updateFrame(GLFWwindow* window) {
     glm::mat4 projection = glm::perspective(glm::radians(80.0f), float(windowWidth) / float(windowHeight), 0.1f, 350.f);
 
     glm::vec3 cameraPosition = glm::vec3(0, 2, -20);
+    // glm::vec3 cameraPosition = glm::vec3(padPositionX * 40 - 20, 2, padPositionZ * 100 - 50);
 
     // Some math to make the camera move in a nice way
     float lookRotation = -0.6 / (1 + exp(-5 * (padPositionX-0.5))) + 0.3;
@@ -317,8 +318,6 @@ void renderNode(SceneNode* node) {
     // activate shader that matches the object
     node->shader->activate();
 
-    // HUSK Å FIKSE SLIK AT ALLE TING TAR INN SHADER
-
     glUniformMatrix4fv(3, 1, GL_FALSE, glm::value_ptr(node->currentTransformationMatrix));
     glUniformMatrix4fv(4, 1, GL_FALSE, glm::value_ptr(node->modelMatrix));
     glm::mat3 normalMatrix = glm::transpose(glm::inverse(glm::mat3(node->modelMatrix)));
@@ -329,6 +328,9 @@ void renderNode(SceneNode* node) {
 
     bool isNormalMapped = node->nodeType == NORMAL_MAPPED_GEOMETRY;
     glUniform1i(15, int(isNormalMapped));
+
+    bool isGrassStraw = node->nodeType == GRASS;
+    glUniform1i(16, int(isGrassStraw));
 
     switch(node->nodeType) {
         case GEOMETRY:
