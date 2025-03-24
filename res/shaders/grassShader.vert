@@ -15,29 +15,36 @@ uniform layout(location = 9) mat4 viewMatrix;
 
 uniform layout(location = 13) mat4 orthoProjection; 
 
-uniform layout(location = 11) vec3 ballPosition;
-
 uniform layout(location = 12) int is2D;
 
 uniform layout(location = 15) int isNormal;
 
 uniform layout(location = 14) vec3 padPosition;
+uniform layout(location = 17) vec3 padDimensions; 
+
 
 uniform layout (location = 16) int isGrassStraw;
 
 out layout(location = 0) vec3 normal_out;
 out layout(location = 1) vec2 textureCoordinates_out;
 out layout(location = 2) vec3 fragPosition;
+out layout(location = 11) float height;
 
 void main()
 {
-    vec3 instanceOffset = vec3(float(gl_InstanceID % 10) * 0.3, 0.0, float(gl_InstanceID / 10) * 0.3);
+    int numInstancesX = int(padDimensions.x / 0.03); // Number of instances along the x-axis
+    int numInstancesZ = int(padDimensions.z / 0.03); // Number of instances along the z-axis
+    float spacingX = padDimensions.x / numInstancesX;
+    float spacingZ = padDimensions.z / numInstancesZ;
+    vec3 instanceOffset = vec3(float(gl_InstanceID % numInstancesX) * spacingX , 0.0, float(gl_InstanceID / numInstancesX) * spacingZ );
 
-    // Legg til offset til posisjonen og juster for padens posisjon
-    vec4 worldPosition = modelMatrix * vec4(position + instanceOffset + padPosition, 1.0);
+    // Add the offset to the position and adjust for the pad's position
+    vec4 worldPosition = modelMatrix * vec4(position + instanceOffset + padPosition - vec3(padDimensions.x / 2.0, 0.0, padDimensions.z / 2.0), 1.0);
     fragPosition = worldPosition.xyz;
     normal_out = normalMatrix * normal_in;
     textureCoordinates_out = textureCoordinates_in;
+
+    height = position.y;
 
     gl_Position = MVP * worldPosition;
 }

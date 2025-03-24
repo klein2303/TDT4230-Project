@@ -25,6 +25,8 @@ in layout(location = 2) vec3 fragPosition;
 
 in layout(location = 3) mat3 TBN;
 
+in layout(location = 11) float grassHeight;
+
 float rand(vec2 co) { return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453); }
 float dither(vec2 uv) { return (rand(uv)*2.0-1.0) / 256.0; }
 
@@ -60,7 +62,9 @@ void main()
     }
 
     if(isGrassStraw == 1){
-        color = vec4(0.0, 1.0, 0.0, 1.0);
+        float greeness = clamp(grassHeight, 0.0, 1.0); // Clamp the height to [0, 1]
+        vec4 green = vec4(0.0, 1.0, 0.0, 1.0);
+        color = green * greeness;
         return;
     }
 
@@ -122,7 +126,7 @@ void main()
 
     // Combine ambient, diffuse and specular 
     // color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
-    color = vec4(0.5, 0.5, 0.5, 1.0); // Set color to gray
+    color = vec4(0.0, 0.5, 0.0, 1.0); 
 
 
 }

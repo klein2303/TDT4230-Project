@@ -29,6 +29,10 @@ enum KeyFrameAction {
 
 double padPositionX = 0;
 double padPositionZ = 0;
+double padPositionY = 0;
+
+float yaw = 0.0;
+float pitch = 0.0;
 
 unsigned int currentKeyFrame = 0;
 unsigned int previousKeyFrame = 0;
@@ -201,7 +205,7 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     padNode->position = glm::vec3(0.0f, 0.0f, 0.0f); // Juster posisjonen etter behov
 
     // Sett posisjonen til gresset
-    grassNode->position = glm::vec3(0.0f, 2.0f, -13.0f); // Juster posisjonen etter behov
+    grassNode->position = glm::vec3(0.0f, 0.0f, 0.0f); // Juster posisjonen etter behov
 
     
     // textNode->vertexArrayObjectID = textVAO;
@@ -217,20 +221,37 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
 }
 
 void handleKeyboardInput(GLFWwindow* window, double deltaTime) {
-    const float moveSpeed = 2.0f; // Bevegelseshastighet
+    const float moveSpeed = 2.0; 
 
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-        padPositionZ -= moveSpeed * deltaTime;
+        padPositionZ -= 5.0 * cos(-yaw) * deltaTime;
+        padPositionX -= 5.0 * sin(-yaw) * deltaTime;
     }
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-        padPositionZ += moveSpeed * deltaTime;
+        padPositionZ += 5.0 * cos(-yaw) * deltaTime;
+        padPositionX += 5.0 * sin(-yaw) * deltaTime;
     }
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-        padPositionX -= moveSpeed * deltaTime;
+        padPositionZ -= 10.0 * sin(-yaw) * deltaTime;
+        padPositionX -= 10.0 * cos(yaw) * deltaTime;
     }
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-        padPositionX += moveSpeed * deltaTime;
+        padPositionZ += 10.0 * sin(-yaw) * deltaTime;
+        padPositionX += 10.0 * cos(yaw) * deltaTime;
     }
+    if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
+        padPositionY += moveSpeed * deltaTime;
+    }
+    if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) {
+        padPositionY -= moveSpeed * deltaTime;
+    }
+    if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+        pitch += 1.0 * deltaTime;
+    }
+    if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+        pitch -= 1.0 * deltaTime;
+    }
+
 
 }
 
@@ -241,20 +262,21 @@ void updateFrame(GLFWwindow* window) {
 
     double timeDelta = getTimeDeltaSeconds();
 
+
     handleKeyboardInput(window, timeDelta);
 
     const float cameraWallOffset = 30; // Arbitrary addition to prevent ball from going too much into camera
 
     glm::mat4 projection = glm::perspective(glm::radians(80.0f), float(windowWidth) / float(windowHeight), 0.1f, 350.f);
 
-    glm::vec3 cameraPosition = glm::vec3(0, 2, -20);
-    // glm::vec3 cameraPosition = glm::vec3(padPositionX * 40 - 20, 2, padPositionZ * 100 - 50);
+    // glm::vec3 cameraPosition = glm::vec3(0, 2, -20);
+    glm::vec3 cameraPosition = glm::vec3(padPositionX , padPositionY , padPositionZ );
 
     // Some math to make the camera move in a nice way
     float lookRotation = -0.6 / (1 + exp(-5 * (padPositionX-0.5))) + 0.3;
     glm::mat4 cameraTransform =
-                    glm::rotate(0.3f + 0.2f * float(-padPositionZ*padPositionZ), glm::vec3(1, 0, 0)) *
-                    glm::rotate(lookRotation, glm::vec3(0, 1, 0)) *
+                    // glm::rotate(0.3f + 0.2f * float(-padPositionZ*padPositionZ), glm::vec3(1, 0, 0)) *
+                    glm::rotate(pitch, glm::vec3(1, 0, 0)) *
                     glm::translate(-cameraPosition);
 
     glm::mat4 VP = projection * cameraTransform;
@@ -366,7 +388,10 @@ void renderNode(SceneNode* node) {
             glBindVertexArray(node->vertexArrayObjectID);
             // Sett padens posisjon som uniform
             glUniform3fv(14, 1, glm::value_ptr(padNode->position));
-            glDrawArraysInstanced(GL_TRIANGLES, 0, node->VAOIndexCount, 1000);
+            glUniform3fv(17, 1, glm::value_ptr(padDimensions));
+            int numInstancesX = int(padDimensions.x / 0.03);
+                int numInstancesZ = int(padDimensions.z / 0.03);
+                glDrawArraysInstanced(GL_TRIANGLES, 0, node->VAOIndexCount, numInstancesX * numInstancesZ);
             }
         break;
     }

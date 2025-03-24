@@ -15,8 +15,6 @@ uniform layout(location = 9) mat4 viewMatrix;
 
 uniform layout(location = 13) mat4 orthoProjection; 
 
-uniform layout(location = 11) vec3 ballPosition;
-
 uniform layout(location = 12) int is2D;
 
 uniform layout(location = 15) int isNormal;
