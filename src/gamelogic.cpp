@@ -224,20 +224,20 @@ void handleKeyboardInput(GLFWwindow* window, double deltaTime) {
     const float moveSpeed = 2.0; 
 
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-        padPositionZ -= 5.0 * cos(-yaw) * deltaTime;
-        padPositionX -= 5.0 * sin(-yaw) * deltaTime;
+        padPositionZ -= 7.0 * cos(-yaw) * deltaTime;
+        padPositionX -= 7.0 * sin(-yaw) * deltaTime;
     }
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-        padPositionZ += 5.0 * cos(-yaw) * deltaTime;
-        padPositionX += 5.0 * sin(-yaw) * deltaTime;
+        padPositionZ += 7.0 * cos(-yaw) * deltaTime;
+        padPositionX += 7.0 * sin(-yaw) * deltaTime;
     }
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-        padPositionZ -= 10.0 * sin(-yaw) * deltaTime;
-        padPositionX -= 10.0 * cos(yaw) * deltaTime;
+        padPositionZ -= 7.0 * sin(-yaw) * deltaTime;
+        padPositionX -= 7.0 * cos(yaw) * deltaTime;
     }
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-        padPositionZ += 10.0 * sin(-yaw) * deltaTime;
-        padPositionX += 10.0 * cos(yaw) * deltaTime;
+        padPositionZ += 7.0 * sin(-yaw) * deltaTime;
+        padPositionX += 7.0 * cos(yaw) * deltaTime;
     }
     if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
         padPositionY += moveSpeed * deltaTime;

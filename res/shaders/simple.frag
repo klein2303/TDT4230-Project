@@ -126,7 +126,7 @@ void main()
 
     // Combine ambient, diffuse and specular 
     // color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
-    color = vec4(0.0, 0.5, 0.0, 1.0); 
+    color = vec4(0.0, 0.2, 0.0, 1.0); 
 
 
 }
