@@ -21,8 +21,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kleinc/TDT4230-Project/src/utilities/timeutils.cpp" "CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o" "gcc" "CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/kleinc/TDT4230-Project/build/lib/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/kleinc/TDT4230-Project/build/lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/DependInfo.cmake"
+  "/home/kleinc/TDT4230-Project/build/lib/fmt/CMakeFiles/fmt.dir/DependInfo.cmake"
+  "/home/kleinc/TDT4230-Project/build/lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

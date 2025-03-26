@@ -51,10 +51,18 @@ PNGImage charmap = loadPNGFile("../res/textures/charmap.png");
 PNGImage diffuseTexture = loadPNGFile("../res/textures/Brick03_col.png");
 PNGImage normalmap = loadPNGFile("../res/textures/Brick03_nrm.png");
 
+PNGImage skyboxUp = loadPNGFile("../res/cubemap/up.png");
+PNGImage skyboxDown = loadPNGFile("../res/cubemap/down.png");
+PNGImage skyboxLeft = loadPNGFile("../res/cubemap/left.png");
+PNGImage skyboxRight = loadPNGFile("../res/cubemap/right.png");
+PNGImage skyboxFront = loadPNGFile("../res/cubemap/front.png");
+PNGImage skyboxBack = loadPNGFile("../res/cubemap/back.png");
+
 // These are heap allocated, because they should not be initialised at the start of the program
 sf::SoundBuffer* buffer;
 Gloom::Shader* shader;
 Gloom::Shader* grassShader;
+Gloom::Shader* skyboxShader;
 sf::Sound* sound;
 
 // const glm::vec3 boxDimensions(180, 90, 90);
