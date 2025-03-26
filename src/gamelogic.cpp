@@ -65,8 +65,8 @@ Gloom::Shader* grassShader;
 Gloom::Shader* skyboxShader;
 sf::Sound* sound;
 
-// const glm::vec3 boxDimensions(180, 90, 90);
-const glm::vec3 padDimensions(40, 0, 100);
+const glm::vec3 boxDimensions(180, 90, 90);
+const glm::vec3 padDimensions(80, 0, 90);
 
 
 CommandLineOptions options;
@@ -150,18 +150,16 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
 
     shader = new Gloom::Shader();
     shader->makeBasicShader("../res/shaders/simple.vert", "../res/shaders/simple.frag");
-    shader->activate();
 
     grassShader = new Gloom::Shader();
     grassShader->makeBasicShader("../res/shaders/grassShader.vert", "../res/shaders/simple.frag");
     
+    skyboxShader = new Gloom::Shader();
+    skyboxShader->makeBasicShader("../res/shaders/skybox.vert", "../res/shaders/skybox.frag");
 
     // Create meshes
     Mesh pad = cube(padDimensions, glm::vec2(30, 40), true);
-    // Mesh box = cube(boxDimensions, glm::vec2(90), true, true);
-    // Mesh sphere = generateSphere(1.0, 40, 40); //KAN FJERNES
-
-    // #Lag mesh for gress
+    Mesh box = cube(boxDimensions, glm::vec2(90), true, true);
     Mesh grass = grassStraw();
 
     // Mesh text = generateTextGeometryBuffer("testtestest", 39./29., 30*29.);
@@ -171,16 +169,13 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     SceneNode* textNode = createTextureNode(textureID(&charmap), shader);
 
     // Fill buffers
-    // unsigned int boxVAO  = generateBuffer(box);
     unsigned int padVAO  = generateBuffer(pad);
-
-    // # Lag VAO for gress
-
+    unsigned int boxVAO  = generateBuffer(box);
     unsigned int grassVAO = generateBuffer(grass);
 
     // Construct scene
     rootNode = createSceneNode(shader);
-    // boxNode  = createSceneNode();
+    boxNode  = createSceneNode(skyboxShader);
     padNode  = createSceneNode(shader);
 
     grassNode = createSceneNode(grassShader);
@@ -192,20 +187,30 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
 
     addChild(rootNode, light1);
     addChild(rootNode, light2);
-    // addChild(rootNode, boxNode);
+    addChild(rootNode, boxNode);
     addChild(rootNode, padNode);
-
-    // # add gress på padNode for at den skal følge paden når paden beveger seg
     addChild(padNode, grassNode);
 
     // addChild(rootNode, textNode);
 
-    // boxNode->vertexArrayObjectID  = boxVAO;
-    // boxNode->VAOIndexCount        = box.indices.size();
-    // // Store textueres
-    // boxNode->nodeType = NORMAL_MAPPED_GEOMETRY;
-    // boxNode->textureID = textureID(&diffuseTexture);
-    // boxNode->normal_mapped_textureID = textureID(&normalmap);
+    boxNode->vertexArrayObjectID  = boxVAO;
+    boxNode->VAOIndexCount        = box.indices.size();
+    // Store textueres
+    boxNode->nodeType = NORMAL_MAPPED_GEOMETRY;
+
+    std::array<GLuint, 6> textures;
+    
+    textures[0] = textureID(&skyboxUp);
+    textures[1] = textureID(&skyboxDown);
+    textures[2] = textureID(&skyboxLeft);
+    textures[3] = textureID(&skyboxRight);
+    textures[4] = textureID(&skyboxFront);
+    textures[5] = textureID(&skyboxBack);
+
+
+    for (int i = 0; i < 6; i++) {
+        boxNode->textureID = textures[i];
+    }
 
     padNode->vertexArrayObjectID  = padVAO;
     padNode->VAOIndexCount        = pad.indices.size();
@@ -359,6 +364,7 @@ void renderNode(SceneNode* node) {
     glm::mat3 normalMatrix = glm::transpose(glm::inverse(glm::mat3(node->modelMatrix)));
     glUniformMatrix3fv(8, 1, GL_FALSE, glm::value_ptr(normalMatrix));
     
+    
     bool is2D = node->is2D;
     glUniform1i(12, int(is2D));
 
@@ -407,6 +413,9 @@ void renderNode(SceneNode* node) {
                 int numInstancesZ = int(padDimensions.z / 0.03);
                 glDrawArraysInstanced(GL_TRIANGLES, 0, node->VAOIndexCount, numInstancesX * numInstancesZ);
             }
+
+            float currentTime = glfwGetTime(); // Hent gjeldende tid
+            glUniform1f(glGetUniformLocation(node->shader->get(), "time"), currentTime);
         break;
     }
 

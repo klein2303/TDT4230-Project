@@ -26,6 +26,11 @@ in layout(location = 2) vec3 fragPosition;
 in layout(location = 3) mat3 TBN;
 
 in layout(location = 11) float grassHeight;
+in layout(location = 18) float time;
+in layout(location = 19) float wind;
+in layout(location = 20) float noiseValue;
+in layout(location = 21) float instanceOffsetX;
+in layout(location = 22) float instanceOffsetZ;
 
 float rand(vec2 co) { return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453); }
 float dither(vec2 uv) { return (rand(uv)*2.0-1.0) / 256.0; }
@@ -65,6 +70,20 @@ void main()
         float greeness = clamp(grassHeight, 0.0, 1.0); // Clamp the height to [0, 1]
         vec4 green = vec4(0.0, 1.0, 0.0, 1.0);
         color = green * greeness;
+        return;
+
+        // float normalizedTime = mod(time, 10.0) / 10.0; // Normaliser `time` til området [0, 1]
+        // float normalizedWind = wind * 0.5 + 0.5; // Normaliser `wind` til området [0, 1]
+        // color = vec4(vec3(normalizedWind), 1.0);
+        // //color = vec4(normalizedTime, normalizedWind, 0.0, 1.0); // Bruk rød for `time` og grønn for `wind`
+
+        // // float normalizedNoise = noiseValue * 0.5 + 0.5; // Normaliser til området [0, 1]
+        // // color = vec4(vec3(normalizedNoise), 1.0); // Visualiser støyen som en gråtone
+        
+        // // float normalizedX = fract(instanceOffsetX * 0.1); // Juster skalaen etter behov
+        // // float normalizedZ = fract(instanceOffsetZ * 0.1); // Juster skalaen etter behov
+
+        // // color = vec4(normalizedX, normalizedZ, 0.0, 1.0); // Rød = X, Grønn = Z
         return;
     }
 
