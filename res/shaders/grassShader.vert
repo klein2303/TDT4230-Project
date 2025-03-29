@@ -101,7 +101,7 @@ void main()
     float windStrength = 7.0; // Juster styrken på vinden
     float wind = perlinNoise(vec3(instanceOffset.x, instanceOffset.z, scaledTime)) * windStrength;
     instanceOffset.x += wind; // Legg til forskyvning i x-retningen
-    instanceOffset.z += wind * 0.2;
+    instanceOffset.z += wind * 0.05; // Legg til forskyvning i z-retningen
 
     // Add the offset to the position and adjust for the pad's position
     vec4 worldPosition = modelMatrix * vec4(position + instanceOffset + padPosition - vec3(padDimensions.x / 2.0, 0.0, padDimensions.z / 2.0), 1.0);

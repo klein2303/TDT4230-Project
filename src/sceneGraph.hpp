@@ -16,7 +16,7 @@
 #include <utilities/shader.hpp>
 
 enum SceneNodeType {
-	GEOMETRY, POINT_LIGHT, SPOT_LIGHT, GEOMETRY_2D, NORMAL_MAPPED_GEOMETRY, GRASS
+	GEOMETRY, POINT_LIGHT, SPOT_LIGHT, GEOMETRY_2D, NORMAL_MAPPED_GEOMETRY, GRASS, CUBE_MAP
 };
 
 struct SceneNode {
@@ -69,7 +69,8 @@ struct SceneNode {
 
 	int lightID;
 
-	int textureID; 
+	int textureID;
+	std::array<GLuint, 6>  cubemap_ids; 
 	int normal_mapped_textureID;
 
 	int is2D;
