@@ -29,8 +29,8 @@ in layout(location = 11) float grassHeight;
 in layout(location = 18) float time;
 in layout(location = 19) float wind;
 in layout(location = 20) float noiseValue;
-in layout(location = 21) float instanceOffsetX;
-in layout(location = 22) float instanceOffsetZ;
+in layout(location = 21) vec2 textureAnimation;
+in layout(location = 22) float shadowFactorGrass;
 
 float rand(vec2 co) { return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453); }
 float dither(vec2 uv) { return (rand(uv)*2.0-1.0) / 256.0; }
@@ -67,10 +67,19 @@ void main()
     }
 
     if(isGrassStraw == 1){
-        float greeness = clamp(grassHeight, 0.0, 1.0); // Clamp the height to [0, 1]
-        vec4 green = vec4(0.0, 1.0, 0.0, 1.0);
-        color = green * greeness;
-        return;
+        float greeness = grassHeight;//clamp(grassHeight, 0.0, 1.0); // Clamp the height to [0, 1]
+        vec3 green = vec3(0.0, 0.6, 0.0);
+        green = green * (greeness*0.5 + 0.5);
+        
+        vec3 shadow = green * 0.5; // skyggen er 5% av grønnfargen. Lavere = mørkere skygge
+
+        vec3 mixColour = mix(shadow, green, shadowFactorGrass);
+
+        // Når shadowFactorGrass = 0.0, brukes kun shadow (full skygge).
+        // Når shadowFactorGrass = 1.0, brukes kun green (ingen skygge).
+        // Når shadowFactorGrass er mellom 0.0 og 1.0, blir resultatet en blanding av shadow og green.
+
+        //color = green * shadowFactorGrass;
 
         // float normalizedTime = mod(time, 10.0) / 10.0; // Normaliser `time` til området [0, 1]
         // float normalizedWind = wind * 0.5 + 0.5; // Normaliser `wind` til området [0, 1]
@@ -84,6 +93,8 @@ void main()
         // // float normalizedZ = fract(instanceOffsetZ * 0.1); // Juster skalaen etter behov
 
         // // color = vec4(normalizedX, normalizedZ, 0.0, 1.0); // Rød = X, Grønn = Z
+        color.rgb = mixColour;
+        color.a = 1.0;
         return;
     }
 
@@ -145,7 +156,8 @@ void main()
 
     // Combine ambient, diffuse and specular 
     // color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
-    color = vec4(0.0, 0.2, 0.0, 1.0); 
+    //color = vec4(0.24, 0.13, 0.00, 1.0); // brown
+    color = vec4(0.0, 0.2, 0.0, 1.0); // green
 
 
 }

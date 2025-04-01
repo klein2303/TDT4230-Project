@@ -33,8 +33,8 @@ out layout(location = 11) float height;
 out layout(location = 18) float time_out;
 out layout(location = 19) float wind_out;
 out layout(location = 20) float noiseValue;
-out layout(location = 21) float instanceOffsetX;
-out layout(location = 22) float instanceOffsetZ;
+out layout(location = 21) vec2 textureAnimation;
+out layout(location = 22) float shadowFactor_out;
 
 float hash(vec3 p) {
     p = fract(p * 0.1031);
@@ -98,10 +98,10 @@ void main()
 
     // Add wind effect with Perlin noise
     float scaledTime = time * 0.01; // Skalerer tiden
-    float windStrength = 7.0; // Juster styrken på vinden
+    float windStrength = 6.0; // Juster styrken på vinden
     float wind = perlinNoise(vec3(instanceOffset.x, instanceOffset.z, scaledTime)) * windStrength;
     instanceOffset.x += wind; // Legg til forskyvning i x-retningen
-    instanceOffset.z += wind * 0.05; // Legg til forskyvning i z-retningen
+    // instanceOffset.z += wind * 0.05; // Legg til forskyvning i z-retningen
 
     // Add the offset to the position and adjust for the pad's position
     vec4 worldPosition = modelMatrix * vec4(position + instanceOffset + padPosition - vec3(padDimensions.x / 2.0, 0.0, padDimensions.z / 2.0), 1.0);
@@ -114,11 +114,22 @@ void main()
     time_out = scaledTime;
     wind_out = wind;
 
-    instanceOffsetX = instanceOffset.x;
-    instanceOffsetZ = instanceOffset.z; 
 
-    // float noise= perlinNoisePeriodic(vec3(fragPosition.x, fragPosition.z, time), 50.0);
-    // noiseValue = noise;
+    // peder: prøv å beregne skygge i fragment shader :)
+    vec3 shadowPosition = vec3(instanceOffset.x + time * (windStrength*0.4), instanceOffset.z, position.y * 0.3); // Skyggens globale posisjon
+    float shadowFactor = perlinNoise(shadowPosition *0.1); // Perlin noise brukes for å lage et organisk mønster. Bruker shadowposition for å beregne mønsteret. Time får det til å bevege seg. 
+    //Det siste tallet bestemmer størrelsen. Lavere = større mønster. Høyere = mindre, mer detaljert mønster.
+    // shadowFactor += perlinNoise(shadowPosition *0.1); // Legger til et annet lag av Perlin noise for mer kompleksitet
+    
+    shadowFactor = 1.0 - shadowFactor;
+
+    // shadowFactor = clamp(shadowFactor, 0.0, 1.0); // Sørg for at verdiene er i området [0, 1]
+    shadowFactor = smoothstep(0.2, 0.7, shadowFactor ); // Brukes for å lage en myk overgang mellom lys og skygge
+    // shadowFactor = pow(shadowFactor, 2.0); // forsterker lave verdier
+    // shadowFactor = smoothstep(0.2, 0.6, pow(shadowFactor, 1.5));
+
+    shadowFactor_out = shadowFactor; // skyggens stryke, går fra 0 til 1 (0 = full skygge, 1 = full lys)
+
 
     gl_Position = MVP * worldPosition;
 }

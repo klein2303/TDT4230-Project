@@ -31,7 +31,7 @@ enum KeyFrameAction
 
 double padPositionX = 0.0;
 double padPositionZ = 0.0;
-double padPositionY = -36.0;
+double padPositionY = 2.0;
 
 float yaw = 0.0;
 float pitch = 0.3;
@@ -62,12 +62,13 @@ PNGImage skyboxBack = loadPNGFile("../res/cubemap/back.png");
 
 // Rekkefølgen må være slik:
 PNGImage cubemap_images[] = {
-    loadPNGFile("../res/cubemap/right.png"),
-    loadPNGFile("../res/cubemap/left.png"),
-    loadPNGFile("../res/cubemap/up.png"),
-    loadPNGFile("../res/cubemap/down.png"),
-    loadPNGFile("../res/cubemap/front.png"),
-    loadPNGFile("../res/cubemap/back.png")};
+    skyboxRight,
+    skyboxLeft,
+    skyboxUp,
+    skyboxDown,
+    skyboxFront,
+    skyboxBack,
+};
 
 // These are heap allocated, because they should not be initialised at the start of the program
 sf::SoundBuffer *buffer;
@@ -132,7 +133,7 @@ struct LightSource
 LightSource lightSources[] =
     {
         {{0, -60, -80}, {1.0, 1.0, 1.0}},
-        {{10, -60, -80}, {1.0, 1.0, 1.0}},
+        {{0, -60, -80}, {1.0, 1.0, 1.0}},
         {{0, -60, -80}, {1.0, 1.0, 1.0}},
 };
 
@@ -245,10 +246,10 @@ void initGame(GLFWwindow *window, CommandLineOptions gameOptions)
     grassNode->nodeType = GRASS;
 
     // Sett posisjonen til paden
-    padNode->position = glm::vec3(0.0f, -40.0f, 0.0f); // Juster posisjonen etter behov
+    padNode->position = glm::vec3(0.0f, 0.0f, 0.0f); // Juster posisjonen etter behov
 
     // Sett posisjonen til gresset
-    grassNode->position = glm::vec3(0.0f, 40.0f, 0.0f); // Juster posisjonen etter behov
+    grassNode->position = glm::vec3(0.0f, 0.0f, 0.0f); // Juster posisjonen etter behov
 
     // textNode->vertexArrayObjectID = textVAO;
     // textNode->VAOIndexCount       = text.indices.size();
@@ -463,21 +464,11 @@ void renderNode(SceneNode *node)
         }
 
         break;
+        
 
     case CUBE_MAP:
         if (node->textureID != -1)
         {
-            GLint currentProgram;
-            glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
-            if (currentProgram == skyboxShader->get())
-            {
-                std::cout << "Skybox Shader Program is active: " << currentProgram << std::endl;
-            }
-            else
-            {
-                std::cout << "Current Shader Program: " << currentProgram << std::endl;
-            }
-            
             glDepthFunc(GL_LEQUAL);
             glDisable(GL_CULL_FACE);
             glDepthMask(GL_FALSE);
