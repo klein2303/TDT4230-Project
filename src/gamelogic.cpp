@@ -303,6 +303,14 @@ void handleKeyboardInput(GLFWwindow *window, double deltaTime)
     {
         pitch += 1.0 * deltaTime;
     }
+    if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
+    {
+        yaw -= 1.0 * deltaTime;
+    }
+    if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+    {
+        yaw += 1.0 * deltaTime;
+    }
 }
 
 void updateFrame(GLFWwindow *window)
@@ -327,6 +335,7 @@ void updateFrame(GLFWwindow *window)
     glm::mat4 cameraTransform =
         // glm::rotate(0.3f + 0.2f * float(-padPositionZ*padPositionZ), glm::vec3(1, 0, 0)) *
         glm::rotate(pitch, glm::vec3(1, 0, 0)) *
+        glm::rotate(yaw, glm::vec3(0, 1, 0)) *
         glm::translate(-cameraPosition);
 
     glm::mat4 VP = projection * cameraTransform;
@@ -465,7 +474,6 @@ void renderNode(SceneNode *node)
 
         break;
         
-
     case CUBE_MAP:
         if (node->textureID != -1)
         {

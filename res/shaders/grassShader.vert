@@ -124,7 +124,7 @@ void main()
     shadowFactor = 1.0 - shadowFactor;
 
     // shadowFactor = clamp(shadowFactor, 0.0, 1.0); // Sørg for at verdiene er i området [0, 1]
-    shadowFactor = smoothstep(0.2, 0.7, shadowFactor ); // Brukes for å lage en myk overgang mellom lys og skygge
+    shadowFactor = smoothstep(0.2, 0.7, shadowFactor); // Brukes for å lage en myk overgang mellom lys og skygge
     // shadowFactor = pow(shadowFactor, 2.0); // forsterker lave verdier
     // shadowFactor = smoothstep(0.2, 0.6, pow(shadowFactor, 1.5));
 

@@ -68,8 +68,8 @@ void main()
 
     if(isGrassStraw == 1){
         float greeness = grassHeight;//clamp(grassHeight, 0.0, 1.0); // Clamp the height to [0, 1]
-        vec3 green = vec3(0.0, 0.6, 0.0);
-        green = green * (greeness*0.5 + 0.5);
+        vec3 green = vec3(0.0, 0.5, 0.0);
+        green = green * (greeness*0.4 + 0.5);
         
         vec3 shadow = green * 0.5; // skyggen er 5% av grønnfargen. Lavere = mørkere skygge
 

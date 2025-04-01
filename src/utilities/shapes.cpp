@@ -234,35 +234,3 @@ Mesh grassStraw() {
 
     return mesh;
 }
-
-
-Mesh pond(float radius, int segments) {
-    Mesh mesh;
-
-    // Senterpunktet for dammen
-    glm::vec3 center = {0.0f, 0.0f, 0.0f};
-    mesh.vertices.push_back(center);
-    mesh.normals.push_back(glm::vec3(0.0f, 1.0f, 0.0f)); // Normale peker oppover
-    mesh.textureCoordinates.push_back(glm::vec2(0.5f, 0.5f)); // Senter av teksturen
-
-    // Generer punkter rundt sirkelen
-    for (int i = 0; i <= segments; i++) {
-        float angle = (float)i / (float)segments * 2.0f * M_PI;
-        float x = radius * cos(angle);
-        float z = radius * sin(angle);
-
-        glm::vec3 point = {x, 0.0f, z};
-        mesh.vertices.push_back(point);
-        mesh.normals.push_back(glm::vec3(0.0f, 1.0f, 0.0f)); // Normale peker oppover
-        mesh.textureCoordinates.push_back(glm::vec2((x / radius) * 0.5f + 0.5f, (z / radius) * 0.5f + 0.5f)); // Teksturkoordinater
-    }
-
-    // Generer indekser for trekantene
-    for (int i = 1; i <= segments; i++) {
-        mesh.indices.push_back(0);       // Senterpunktet
-        mesh.indices.push_back(i);       // Nåværende punkt
-        mesh.indices.push_back(i + 1);   // Neste punkt
-    }
-
-    return mesh;
-}
