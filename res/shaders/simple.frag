@@ -156,8 +156,8 @@ void main()
 
     // Combine ambient, diffuse and specular 
     // color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
-    //color = vec4(0.24, 0.13, 0.00, 1.0); // brown
-    color = vec4(0.0, 0.2, 0.0, 1.0); // green
+    color = vec4(0.08, 0.05, 0.03, 1.0); // brown
+    //color = vec4(0.0, 0.2, 0.0, 1.0); // green
 
 
 }

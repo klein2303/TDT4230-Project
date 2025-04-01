@@ -53,12 +53,12 @@ PNGImage charmap = loadPNGFile("../res/textures/charmap.png");
 PNGImage diffuseTexture = loadPNGFile("../res/textures/Brick03_col.png");
 PNGImage normalmap = loadPNGFile("../res/textures/Brick03_nrm.png");
 
-PNGImage skyboxUp = loadPNGFile("../res/cubemap/up.png");
-PNGImage skyboxDown = loadPNGFile("../res/cubemap/down.png");
-PNGImage skyboxLeft = loadPNGFile("../res/cubemap/left.png");
-PNGImage skyboxRight = loadPNGFile("../res/cubemap/right.png");
-PNGImage skyboxFront = loadPNGFile("../res/cubemap/front.png");
-PNGImage skyboxBack = loadPNGFile("../res/cubemap/back.png");
+PNGImage skyboxRight = loadPNGFile("../res/cubemap2/right.png");
+PNGImage skyboxLeft = loadPNGFile("../res/cubemap2/left.png");
+PNGImage skyboxUp = loadPNGFile("../res/cubemap2/up.png");
+PNGImage skyboxDown = loadPNGFile("../res/cubemap2/down.png");
+PNGImage skyboxFront = loadPNGFile("../res/cubemap2/front.png");
+PNGImage skyboxBack = loadPNGFile("../res/cubemap2/back.png");
 
 // Rekkefølgen må være slik:
 PNGImage cubemap_images[] = {

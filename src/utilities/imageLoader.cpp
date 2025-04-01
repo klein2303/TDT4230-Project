@@ -25,11 +25,11 @@ PNGImage loadPNGFile(std::string fileName)
 
 	unsigned int widthBytes = 4 * width;
 
-	for(unsigned int row = 0; row < (height / 2); row++) {
-		for(unsigned int col = 0; col < widthBytes; col++) {
-			std::swap(pixels[row * widthBytes + col], pixels[(height - 1 - row) * widthBytes + col]);
-		}
-	}
+	// for(unsigned int row = 0; row < (height / 2); row++) {
+	// 	for(unsigned int col = 0; col < widthBytes; col++) {
+	// 		std::swap(pixels[row * widthBytes + col], pixels[(height - 1 - row) * widthBytes + col]);
+	// 	}
+	// }
 
 	PNGImage image;
 	image.width = width;
