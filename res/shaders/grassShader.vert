@@ -42,45 +42,6 @@ float hash(vec3 p) {
     return fract((p.x + p.y) * p.z);
 }
 
-float fade(float t) {
-    return t * t * t * (t * (t * 6.0 - 15.0) + 10.0);
-}
-
-float grad(int hash, float x, float y, float z) {
-    int h = hash & 15;
-    float u = h < 8 ? x : y;
-    float v = h < 4 ? y : h == 12 || h == 14 ? x : z;
-    return ((h & 1) == 0 ? u : -u) + ((h & 2) == 0 ? v : -v);
-}
-
-float perlinNoise(vec3 p) {
-    vec3 Pi = floor(p);
-    vec3 Pf = fract(p);
-
-    vec3 fadePf = vec3(fade(Pf.x), fade(Pf.y), fade(Pf.z));
-
-    int A = int(Pi.x) + int(Pi.y) * 57 + int(Pi.z) * 113;
-    int AA = A + 1;
-    int AB = A + 57;
-    int BA = A + 113;
-    int BB = A + 170;
-
-    float res = mix(
-        mix(
-            mix(grad(A, Pf.x, Pf.y, Pf.z), grad(AA, Pf.x - 1.0, Pf.y, Pf.z), fadePf.x),
-            mix(grad(AB, Pf.x, Pf.y - 1.0, Pf.z), grad(AA + 57, Pf.x - 1.0, Pf.y - 1.0, Pf.z), fadePf.x),
-            fadePf.y
-        ),
-        mix(
-            mix(grad(BA, Pf.x, Pf.y, Pf.z - 1.0), grad(BB, Pf.x - 1.0, Pf.y, Pf.z - 1.0), fadePf.x),
-            mix(grad(AB + 113, Pf.x, Pf.y - 1.0, Pf.z - 1.0), grad(BB + 57, Pf.x - 1.0, Pf.y - 1.0, Pf.z - 1.0), fadePf.x),
-            fadePf.y
-        ),
-        fadePf.z
-    );
-
-    return res;
-}
 
 void main()
 {
@@ -92,15 +53,14 @@ void main()
     vec3 instanceOffset = vec3(float(gl_InstanceID % numInstancesX) * spacingX , 0.0, float(gl_InstanceID / numInstancesX) * spacingZ );
 
     // place grass straw more randomly
-    instanceOffset.x += hash(instanceOffset );
-    instanceOffset.z += hash(instanceOffset );
+    instanceOffset.x += hash(instanceOffset);
+    instanceOffset.z += hash(instanceOffset);
 
     // Scale the height of the grass straw
     float heightScale = 1.0 + hash(instanceOffset) * 0.5; // Scale factor between 0.5 and 1.0
     vec3 scaledPosition = position; // Start with the original position
     scaledPosition.y *= heightScale; // Scale the height (y-axis)
 
-    // Add wind effect with Perlin noise
     // Simuler vind med sinus og cosinus
     float windX = sin(time * 0.03 + instanceOffset.x * 0.5) * 0.9; // Vind i x-retning
 
