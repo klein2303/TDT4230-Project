@@ -78,7 +78,7 @@ Gloom::Shader *skyboxShader;
 sf::Sound *sound;
 
 const glm::vec3 boxDimensions(180, 90, 90);
-const glm::vec3 padDimensions(80, 0, 90);
+const glm::vec3 padDimensions(80, 0, 70);
 
 CommandLineOptions options;
 
@@ -465,8 +465,8 @@ void renderNode(SceneNode *node)
             // Sett padens posisjon som uniform
             glUniform3fv(14, 1, glm::value_ptr(padNode->position));
             glUniform3fv(17, 1, glm::value_ptr(padDimensions));
-            int numInstancesX = int(padDimensions.x / 0.03);
-            int numInstancesZ = int(padDimensions.z / 0.03);
+            int numInstancesX = int(padDimensions.x / 0.02);
+            int numInstancesZ = int(padDimensions.z / 0.02);
             glDrawArraysInstanced(GL_TRIANGLES, 0, node->VAOIndexCount, numInstancesX * numInstancesZ);
             float currentTime = glfwGetTime(); // Hent gjeldende tid
             glUniform1f(glGetUniformLocation(node->shader->get(), "time"), currentTime);

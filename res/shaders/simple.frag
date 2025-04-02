@@ -30,46 +30,69 @@ in layout(location = 18) float time;
 in layout(location = 19) float wind;
 in layout(location = 20) float noiseValue;
 in layout(location = 21) vec2 textureAnimation;
-in layout(location = 22) float shadowFactorGrass;
-
-float rand(vec2 co) { return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453); }
-float dither(vec2 uv) { return (rand(uv)*2.0-1.0) / 256.0; }
-
-vec3 reject(vec3 from, vec3 onto) {
-return from - onto*dot(from, onto)/dot(onto, onto);
-}
+// in layout(location = 22) float shadowFactorGrass; 
 
 out vec4 color;
 
-struct LightSource {
-    vec3 position;
-    vec3 color;
-};
+float windStrength = 5.0;
 
-uniform LightSource lightSources[3];
+float fade(float t) {
+    return t * t * t * (t * (t * 6.0 - 15.0) + 10.0);
+}
+
+float grad(int hash, float x, float y, float z) {
+    int h = hash & 15;
+    float u = h < 8 ? x : y;
+    float v = h < 4 ? y : h == 12 || h == 14 ? x : z;
+    return ((h & 1) == 0 ? u : -u) + ((h & 2) == 0 ? v : -v);
+}
+
+float perlinNoise(vec3 p) {
+    vec3 Pi = floor(p);
+    vec3 Pf = fract(p);
+
+    vec3 fadePf = vec3(fade(Pf.x), fade(Pf.y), fade(Pf.z));
+
+    int A = int(Pi.x) + int(Pi.y) * 57 + int(Pi.z) * 113;
+    int AA = A + 1;
+    int AB = A + 57;
+    int BA = A + 113;
+    int BB = A + 170;
+
+    float res = mix(
+        mix(
+            mix(grad(A, Pf.x, Pf.y, Pf.z), grad(AA, Pf.x - 1.0, Pf.y, Pf.z), fadePf.x),
+            mix(grad(AB, Pf.x, Pf.y - 1.0, Pf.z), grad(AA + 57, Pf.x - 1.0, Pf.y - 1.0, Pf.z), fadePf.x),
+            fadePf.y
+        ),
+        mix(
+            mix(grad(BA, Pf.x, Pf.y, Pf.z - 1.0), grad(BB, Pf.x - 1.0, Pf.y, Pf.z - 1.0), fadePf.x),
+            mix(grad(AB + 113, Pf.x, Pf.y - 1.0, Pf.z - 1.0), grad(BB + 57, Pf.x - 1.0, Pf.y - 1.0, Pf.z - 1.0), fadePf.x),
+            fadePf.y
+        ),
+        fadePf.z
+    );
+
+    return res;
+}
+
 
 void main()
 {
-    vec3 normalizedNormal = normalize(normal).rgb;
-    vec4 diffuseColor = vec4(1, 1, 1, 1);
-
-
-    if(is2D == 1){
-        color = texture(diffuseMap, textureCoordinates);
-        return;
-    }
-
-    if(isNormal == 1){
-        diffuseColor = texture(diffuseMap, textureCoordinates);
-        vec3 normal = TBN* (texture(normalMap, textureCoordinates).rgb * 2.0 - 1.0);
-        normalizedNormal = normalize(normal);
-
-    }
 
     if(isGrassStraw == 1){
-        float greeness = grassHeight;//clamp(grassHeight, 0.0, 1.0); // Clamp the height to [0, 1]
         vec3 green = vec3(0.0, 0.5, 0.0);
-        green = green * (greeness*0.4 + 0.5);
+        green = green * (grassHeight*0.3 + 0.5);
+
+        vec3 shadowPosition = vec3(fragPosition.x + time * (windStrength * 0.5), fragPosition.z, fragPosition.y * 0.3); // Skyggens globale posisjon
+        float shadowFactorGrass = perlinNoise(shadowPosition *0.05); // Perlin noise brukes for å lage et organisk mønster. Bruker shadowposition for å beregne mønsteret. Time får det til å bevege seg. 
+        //Det siste tallet bestemmer størrelsen. Lavere = større mønster. Høyere = mindre, mer detaljert mønster.
+        // shadowFactor += perlinNoise(shadowPosition *0.1); // Legger til et annet lag av Perlin noise for mer kompleksitet
+    
+        shadowFactorGrass = 1.0 - shadowFactorGrass;
+
+        // shadowFactor = clamp(shadowFactor, 0.0, 1.0); // Sørg for at verdiene er i området [0, 1]
+        shadowFactorGrass = smoothstep(0.2, 0.7, shadowFactorGrass);
         
         vec3 shadow = green * 0.5; // skyggen er 5% av grønnfargen. Lavere = mørkere skygge
 
@@ -93,71 +116,18 @@ void main()
         // // float normalizedZ = fract(instanceOffsetZ * 0.1); // Juster skalaen etter behov
 
         // // color = vec4(normalizedX, normalizedZ, 0.0, 1.0); // Rød = X, Grønn = Z
+        float normalizedHeight = clamp(grassHeight, 0.0, 2.0);
+        float alpha = mix(0.2, 1.0, normalizedHeight); // Alpha går fra 0.0 (bunn) til 1.0 (topp)
+        
         color.rgb = mixColour;
         color.a = 1.0;
         return;
     }
 
-    vec3 ambient = vec3(0.1, 0.1, 0.1);
-
-    float shininess = 32.0; // Higher values = shinier surface
-
-    float la = 1;
-    float lb = 0.01;
-    float lc = 0.001;
-
-    // eye vector (camera to fragment)
-    vec3 eyeVector = normalize(cameraPosition - fragPosition);
-
-
-    vec3 diffuse = vec3(0.0);
-    vec3 specular = vec3(0.0);
-
-    // Hard shadow radius
-    float hardShadowRadius = ballRadius;  
-
-    // Soft shadow radius 
-    float softShadowRadius = ballRadius * 1.5;
-
-    for (int i = 0; i < 3; i++) {
-        vec3 lightDir = normalize(lightSources[i].position - fragPosition);
-        
-        float d = length(lightSources[i].position - fragPosition); //lightDir length
-
-        // bool inShadow = false; for task 3
-
-        vec3 rejection = reject(fragPosition, lightDir);
-        float shadowFactor = 1.0; // 1.0 = full light, 0.0 = fully shadoiwed
-        
-        if (dot(lightSources[i].position - fragPosition, fragPosition) > 0 &&
-            length(rejection) < softShadowRadius ) {
-
-            if (length(rejection) < hardShadowRadius) {
-                shadowFactor = 0.0; // Fully shadowed
-            } else {
-                // Linear interpolation between hard and soft ahadow
-                float t = (length(rejection) - hardShadowRadius) / (softShadowRadius - hardShadowRadius);
-                shadowFactor = mix(0.0, 1.0, t); // does the linear interpolation
-            }
-        }
-
-        if (shadowFactor > 0.0) {
-            float attenuation = 1.0 / (la + lb * d + lc * d * d);
-            float diffIntensity = max(dot(normalizedNormal, lightDir), 0.0);
-            diffuse += attenuation * diffIntensity * lightSources[i].color * shadowFactor;
-            
-            vec3 reflectionVector = normalize(reflect(-lightDir, normalizedNormal));
-            float specIntensity = pow(max(dot(reflectionVector, eyeVector), 0.0), shininess);
-            specular += attenuation * specIntensity * lightSources[i].color * shadowFactor;
-        }
-
-    }
-    float dither = dither(textureCoordinates);
-
     // Combine ambient, diffuse and specular 
     // color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
-    color = vec4(0.08, 0.05, 0.03, 1.0); // brown
-    //color = vec4(0.0, 0.2, 0.0, 1.0); // green
+    // color = vec4(0.08, 0.05, 0.03, 1.0); // brown
+    color = vec4(0.0, 0.2, 0.0, 1.0); // green
 
 
 }
