@@ -50,11 +50,20 @@ void main()
     float spacingX = padDimensions.x / numInstancesX;
     float spacingZ = padDimensions.z / numInstancesZ;
     
-    vec3 instanceOffset = vec3(float(gl_InstanceID % numInstancesX) * spacingX , 0.0, float(gl_InstanceID / numInstancesX) * spacingZ );
+    vec3 instanceOffset = vec3(float(gl_InstanceID % numInstancesX) * spacingX , 0.0, float(gl_InstanceID / numInstancesX) * spacingZ);
 
-    // place grass straw more randomly
-    instanceOffset.x += hash(instanceOffset);
-    instanceOffset.z += hash(instanceOffset);
+    // place grass straw randomly
+    instanceOffset.x += hash(instanceOffset + vec3(float(gl_InstanceID) * 0.1, 0.0, 0.0)) * 0.1;
+    instanceOffset.z += hash(instanceOffset + vec3(0.0, 0.0, float(gl_InstanceID) * 0.1)) * 0.1;
+
+    // combine with more hash for more randomness
+    float randomX = hash(instanceOffset + vec3(1.0, 0.0, 0.0)) * 0.1 +
+                    hash(instanceOffset + vec3(2.0, 0.0, 0.0)) * 0.05;
+    float randomZ = hash(instanceOffset + vec3(0.0, 0.0, 1.0)) * 0.1 +
+                    hash(instanceOffset + vec3(0.0, 0.0, 2.0)) * 0.05;
+
+    instanceOffset.x += randomX;
+    instanceOffset.z += randomZ;
 
     // Scale the height of the grass straw
     float heightScale = 1.0 + hash(instanceOffset) * 0.5; // Scale factor between 0.5 and 1.0
@@ -77,9 +86,10 @@ void main()
     // Second 0.5 shifts the sine wave to [0, 1] by adding 0.5
 
     bendFactor *= 0.3; // defines how much the grass bends
-
+    
     vec3 bendDirection = vec3(-1.0, 0.0, 0.0);
     vec3 bentPosition = scaledPosition + bendDirection * bendFactor * scaledPosition.y; // Bøy basert på høyde (y)
+
 
     // Add the offset to the position and adjust for the pad's position
     vec4 worldPosition = modelMatrix * vec4(bentPosition + instanceOffset + padPosition - vec3(padDimensions.x / 2.0, 0.0, padDimensions.z / 2.0), 1.0);

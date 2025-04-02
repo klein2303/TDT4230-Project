@@ -34,7 +34,7 @@ in layout(location = 21) vec2 textureAnimation;
 
 out vec4 color;
 
-float windStrength = 5.0;
+float windStrength = 4.0;
 
 float fade(float t) {
     return t * t * t * (t * (t * 6.0 - 15.0) + 10.0);
@@ -81,11 +81,22 @@ void main()
 {
 
     if(isGrassStraw == 1){
-        vec3 green = vec3(0.0, 0.5, 0.0);
-        green = green * (grassHeight*0.3 + 0.5);
+        vec3 baseColor = vec3(0.0, 0.4, 0.0); // Mørkere grønn for lavere høyder
+        vec3 topColor = vec3(0.0, 0.8, 0.0); // Lysere grønn for høyere høyder
+
+        // Interpoler mellom baseColor og topColor basert på høyden
+        float heightFactor = clamp(grassHeight, 0.0, 1.0); // Normaliser høyden til området [0, 1]
+        vec3 green = mix(baseColor, topColor, heightFactor);
+
+        // Forsterk fargeforskjellen ytterligere
+        green = green * (grassHeight * 0.5 + 0.5);
+
+
+        // vec3 green = vec3(0.0, 0.6, 0.0);
+        // green = green * (grassHeight*0.3 + 0.5);
 
         vec3 shadowPosition = vec3(fragPosition.x + time * (windStrength * 0.5), fragPosition.z, fragPosition.y * 0.3); // Skyggens globale posisjon
-        float shadowFactorGrass = perlinNoise(shadowPosition *0.05); // Perlin noise brukes for å lage et organisk mønster. Bruker shadowposition for å beregne mønsteret. Time får det til å bevege seg. 
+        float shadowFactorGrass = perlinNoise(shadowPosition *0.07); // Perlin noise brukes for å lage et organisk mønster. Bruker shadowposition for å beregne mønsteret. Time får det til å bevege seg. 
         //Det siste tallet bestemmer størrelsen. Lavere = større mønster. Høyere = mindre, mer detaljert mønster.
         // shadowFactor += perlinNoise(shadowPosition *0.1); // Legger til et annet lag av Perlin noise for mer kompleksitet
     
@@ -126,8 +137,8 @@ void main()
 
     // Combine ambient, diffuse and specular 
     // color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
-    // color = vec4(0.08, 0.05, 0.03, 1.0); // brown
-    color = vec4(0.0, 0.2, 0.0, 1.0); // green
+    color = vec4(0.18, 0.10, 0.00, 1.0); // brown
+    // color = vec4(0.0, 0.2, 0.0, 1.0); // green
 
 
 }
