@@ -42,16 +42,7 @@ unsigned int previousKeyFrame = 0;
 SceneNode *rootNode;
 SceneNode *boxNode;
 SceneNode *padNode;
-SceneNode *light1;
-SceneNode *light2;
-SceneNode *movingLightNode;
 SceneNode *grassNode;
-
-double ballRadius = 3.0f;
-
-PNGImage charmap = loadPNGFile("../res/textures/charmap.png");
-PNGImage diffuseTexture = loadPNGFile("../res/textures/Brick03_col.png");
-PNGImage normalmap = loadPNGFile("../res/textures/Brick03_nrm.png");
 
 PNGImage skyboxRight = loadPNGFile("../res/cubemap2/right.png");
 PNGImage skyboxLeft = loadPNGFile("../res/cubemap2/left.png");
@@ -71,14 +62,12 @@ PNGImage cubemap_images[] = {
 };
 
 // These are heap allocated, because they should not be initialised at the start of the program
-sf::SoundBuffer *buffer;
 Gloom::Shader *shader;
 Gloom::Shader *grassShader;
 Gloom::Shader *skyboxShader;
-sf::Sound *sound;
 
 const glm::vec3 boxDimensions(180, 90, 90);
-const glm::vec3 padDimensions(80, 0, 70);
+const glm::vec3 padDimensions(90, 0, 70);
 
 CommandLineOptions options;
 
@@ -92,14 +81,10 @@ bool mouseLeftReleased = false;
 bool mouseRightPressed = false;
 bool mouseRightReleased = false;
 
-// Modify if you want the music to start further on in the track. Measured in seconds.
-const float debug_startTime = 0;
-double totalElapsedTime = debug_startTime;
-double gameElapsedTime = debug_startTime;
-
 double mouseSensitivity = 1.0;
 double lastMouseX = windowWidth / 2;
 double lastMouseY = windowHeight / 2;
+
 void mouseCallback(GLFWwindow *window, double x, double y)
 {
     int windowWidth, windowHeight;
@@ -122,34 +107,6 @@ void mouseCallback(GLFWwindow *window, double x, double y)
         padPositionZ = 0;
 
     glfwSetCursorPos(window, windowWidth / 2, windowHeight / 2);
-}
-
-//// A few lines to help you if you've never used c++ structs
-struct LightSource
-{
-    glm::vec3 position;
-    glm::vec3 color;
-};
-LightSource lightSources[] =
-    {
-        {{0, -60, -80}, {1.0, 1.0, 1.0}},
-        {{0, -60, -80}, {1.0, 1.0, 1.0}},
-        {{0, -60, -80}, {1.0, 1.0, 1.0}},
-};
-
-GLuint textureID(PNGImage *image)
-{
-    GLuint textureID;
-    glGenTextures(1, &textureID);
-    glBindTexture(GL_TEXTURE_2D, textureID);
-
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image->width, image->height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image->pixels.data());
-
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glGenerateMipmap(GL_TEXTURE_2D);
-
-    return textureID;
 }
 
 GLuint cubemapID(PNGImage (&images)[6])
@@ -199,12 +156,6 @@ void initGame(GLFWwindow *window, CommandLineOptions gameOptions)
     Mesh box = cube(boxDimensions, glm::vec2(90), true, true);
     Mesh grass = grassStraw();
 
-    // Mesh text = generateTextGeometryBuffer("testtestest", 39./29., 30*29.);
-    // unsigned int textVAO = generateBuffer(text);
-
-    // Create 2D geometry node
-    SceneNode *textNode = createTextureNode(textureID(&charmap), shader);
-
     // Fill buffers
     unsigned int padVAO = generateBuffer(pad);
     unsigned int boxVAO = generateBuffer(box);
@@ -213,22 +164,12 @@ void initGame(GLFWwindow *window, CommandLineOptions gameOptions)
     // Construct scene
     rootNode = createSceneNode(shader);
     padNode = createSceneNode(shader);
-    
     boxNode = createSceneNode(skyboxShader);
-
     grassNode = createSceneNode(grassShader);
 
-    light1 = createLightNode(0, shader);
-    light2 = createLightNode(1, shader);
-    movingLightNode = createLightNode(2, shader);
-
-    addChild(rootNode, light1);
-    addChild(rootNode, light2);
     addChild(rootNode, boxNode);
     addChild(rootNode, padNode);
     addChild(padNode, grassNode);
-
-    // addChild(rootNode, textNode);
 
     boxNode->vertexArrayObjectID = boxVAO;
     boxNode->VAOIndexCount = box.indices.size();
@@ -239,26 +180,17 @@ void initGame(GLFWwindow *window, CommandLineOptions gameOptions)
 
     padNode->vertexArrayObjectID = padVAO;
     padNode->VAOIndexCount = pad.indices.size();
+    padNode->position = glm::vec3(0.0f, 0.0f, 0.0f); // Juster posisjonen etter behov
 
-    // # Sett opp gressNode på tilsvarende måte som padNode
     grassNode->vertexArrayObjectID = grassVAO;
     grassNode->VAOIndexCount = grass.indices.size();
     grassNode->nodeType = GRASS;
-
-    // Sett posisjonen til paden
-    padNode->position = glm::vec3(0.0f, 0.0f, 0.0f); // Juster posisjonen etter behov
-
-    // Sett posisjonen til gresset
     grassNode->position = glm::vec3(0.0f, 0.0f, 0.0f); // Juster posisjonen etter behov
 
-    // textNode->vertexArrayObjectID = textVAO;
-    // textNode->VAOIndexCount       = text.indices.size();
 
     getTimeDeltaSeconds();
 
     std::cout << fmt::format("IniticurrentTransformationMatrixalized scene with {} SceneNodes.", totalChildren(rootNode)) << std::endl;
-
-    std::cout << "Skybox VAO: " << boxNode->vertexArrayObjectID << ", Index Count: " << boxNode->VAOIndexCount << std::endl;
 
     std::cout << "pad VAO: " << padNode->vertexArrayObjectID << ", Index Count: " << padNode->VAOIndexCount << std::endl;
 }
@@ -315,7 +247,6 @@ void handleKeyboardInput(GLFWwindow *window, double deltaTime)
 
 void updateFrame(GLFWwindow *window)
 {
-    // printf("Pad VAO: %d, Index Count: %d\n", padNode->vertexArrayObjectID, padNode->VAOIndexCount);
 
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
@@ -323,33 +254,19 @@ void updateFrame(GLFWwindow *window)
 
     handleKeyboardInput(window, timeDelta);
 
-    const float cameraWallOffset = 30; // Arbitrary addition to prevent ball from going too much into camera
-
     glm::mat4 projection = glm::perspective(glm::radians(80.0f), float(windowWidth) / float(windowHeight), 0.1f, 350.f);
 
-    // glm::vec3 cameraPosition = glm::vec3(0, 2, -20);
     glm::vec3 cameraPosition = glm::vec3(padPositionX, padPositionY, padPositionZ);
 
     // Some math to make the camera move in a nice way
     float lookRotation = -0.6 / (1 + exp(-5 * (padPositionX - 0.5))) + 0.3;
     glm::mat4 cameraTransform =
-        // glm::rotate(0.3f + 0.2f * float(-padPositionZ*padPositionZ), glm::vec3(1, 0, 0)) *
         glm::rotate(pitch, glm::vec3(1, 0, 0)) *
         glm::rotate(yaw, glm::vec3(0, 1, 0)) *
         glm::translate(-cameraPosition);
 
     glm::mat4 VP = projection * cameraTransform;
     glm::mat4 modelMatrix = glm::mat4(1.0f);
-
-    // Move and rotate various SceneNodes
-    // boxNode->position = { 0, -10, -80 };
-
-    // padNode->position  = {
-    //     boxNode->position.x - (boxDimensions.x/2) + (padDimensions.x/2) + (1 - padPositionX) * (boxDimensions.x - padDimensions.x),
-    //     boxNode->position.y - (boxDimensions.y/2) + (padDimensions.y/2),
-    //     boxNode->position.z - (boxDimensions.z/2) + (padDimensions.z/2) + (1 - padPositionZ) * (boxDimensions.z - padDimensions.z)
-    // };
-
     glm::mat4 viewMatrix = cameraTransform;
 
     skyboxShader->activate();
@@ -358,26 +275,6 @@ void updateFrame(GLFWwindow *window)
 
     int location = skyboxShader->getUniformFromName("projection");
     glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(projection));
-  
-    // glm::mat4 view = glm::mat4(glm::mat3(cameraTransform));
-    // glUniformMatrix4fv(glGetUniformLocation(skyboxShader->get(), "view"), 1, GL_FALSE, glm::value_ptr(view));
-    // int viewLocation = skyboxShader->getUniformFromName("view");
-    // glUniformMatrix4fv(viewLocation, 1, GL_FALSE, glm::value_ptr(viewMatrix));
-
-    // std::cout << "View Matrix:" << std::endl;
-    // for (int i = 0; i < 4; ++i)
-    // {
-    //     for (int j = 0; j < 4; ++j)
-    //     {
-    //         std::cout << view[i][j] << " ";
-    //     }
-    //     std::cout << std::endl;
-    // }
-
-
-    // Create orthographic projection matrix
-    glm::mat4 orthoProjection = glm::ortho(0.0f, float(windowWidth), 0.0f, float(windowHeight));
-    glUniformMatrix4fv(13, 1, GL_FALSE, glm::value_ptr(orthoProjection));
 
     updateNodeTransformations(rootNode, VP, modelMatrix);
 }
@@ -385,8 +282,13 @@ void updateFrame(GLFWwindow *window)
 void updateNodeTransformations(SceneNode *node, glm::mat4 transformationThusFar, glm::mat4 modelMatrix)
 {
 
-    glm::mat4 transformationMatrix =
-        glm::translate(node->position) * glm::translate(node->referencePoint) * glm::rotate(node->rotation.y, glm::vec3(0, 1, 0)) * glm::rotate(node->rotation.x, glm::vec3(1, 0, 0)) * glm::rotate(node->rotation.z, glm::vec3(0, 0, 1)) * glm::scale(node->scale) * glm::translate(-node->referencePoint);
+    glm::mat4 transformationMatrix = 
+        glm::translate(node->position) * 
+        glm::translate(node->referencePoint) * 
+        glm::rotate(node->rotation.y, glm::vec3(0, 1, 0)) * 
+        glm::rotate(node->rotation.x, glm::vec3(1, 0, 0)) * 
+        glm::rotate(node->rotation.z, glm::vec3(0, 0, 1)) * 
+        glm::scale(node->scale) * glm::translate(-node->referencePoint);
 
     node->modelMatrix = transformationMatrix * modelMatrix;                           // Model matrix
     node->currentTransformationMatrix = transformationThusFar * transformationMatrix; // MVP
@@ -395,14 +297,6 @@ void updateNodeTransformations(SceneNode *node, glm::mat4 transformationThusFar,
     {
         updateNodeTransformations(child, node->currentTransformationMatrix, node->modelMatrix);
     }
-
-    // if (node == padNode) {
-    //     printf("PadNode Light Positions: %f, %f, %f\n", light1->lightPos.x, light1->lightPos.y, light1->lightPos.z);
-    // }
-
-    // if (node->lightID == 1 || node->lightID == 2 || node->lightID == 3) {
-    // printf("Light %d Position: %f, %f, %f\n", node->lightID, node->lightPos.x, node->lightPos.y, node->lightPos.z);
-    // }
 }
 
 void renderNode(SceneNode *node)
@@ -453,27 +347,23 @@ void renderNode(SceneNode *node)
             glDrawElements(GL_TRIANGLES, node->VAOIndexCount, GL_UNSIGNED_INT, nullptr);
         }
         break;
-    case POINT_LIGHT:
-        break;
-    case SPOT_LIGHT:
-        break;
-
     case GRASS:
         if (node->vertexArrayObjectID != -1)
         {
             glBindVertexArray(node->vertexArrayObjectID);
-            // Sett padens posisjon som uniform
+            // Set the pads positions and dimensions as uniforms
             glUniform3fv(14, 1, glm::value_ptr(padNode->position));
             glUniform3fv(17, 1, glm::value_ptr(padDimensions));
+
             int numInstancesX = int(padDimensions.x / 0.02);
             int numInstancesZ = int(padDimensions.z / 0.02);
             glDrawArraysInstanced(GL_TRIANGLES, 0, node->VAOIndexCount, numInstancesX * numInstancesZ);
-            float currentTime = glfwGetTime(); // Hent gjeldende tid
+            
+            // Set the time uniform 
+            float currentTime = glfwGetTime(); 
             glUniform1f(glGetUniformLocation(node->shader->get(), "time"), currentTime);
         }
-
         break;
-        
     case CUBE_MAP:
         if (node->textureID != -1)
         {

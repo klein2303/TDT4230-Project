@@ -211,25 +211,25 @@ Mesh generateSphere(float sphereRadius, int slices, int layers) {
 Mesh grassStraw() {
     Mesh mesh;
 
-    // Definerer punktene for et enkelt gresstrå
+    // Points for the traingles
     glm::vec3 points[4] = {
-        {0.0, 0.0, 0.0}, // Bunn venstre
-        {0.05, 0.0, 0.0}, // Bunn høyre
+        {0.0, 0.0, 0.0}, // Bottom left
+        {0.05, 0.0, 0.0}, // Bottom right
         {0.025, 0.25, 0.0}, // Midt
         {0.025, 0.35, 0.0}  // Topp
     };
 
-    // Definerer indeksene for trekantene
+    // Define triangle indexes
     unsigned int indices[6] = {0, 1, 2, 0, 2, 3};
     for (int i = 0; i < 6; i++) {
         mesh.indices.push_back(indices[i]);
     }
 
-    // Legger til punktene i mesh
+    // Add the points to the mesh
     for (int i = 0; i < 6; i++) {
         mesh.vertices.push_back(points[indices[i]]);
-        mesh.normals.push_back(glm::vec3(0.0f, 0.0f, 1.0f)); // Normale peker ut av skjermen
-        mesh.textureCoordinates.push_back(glm::vec2(points[i].x, points[i].y)); // Enkle teksturkoordinater
+        mesh.normals.push_back(glm::vec3(0.0f, 0.0f, 1.0f)); 
+        mesh.textureCoordinates.push_back(glm::vec2(points[i].x, points[i].y)); 
     }
 
     return mesh;

@@ -3,13 +3,6 @@
 in layout(location = 0) vec3 normal;
 in layout(location = 1) vec2 textureCoordinates;
 
-layout(binding = 0) uniform sampler2D diffuseMap;
-layout(binding = 1) uniform sampler2D normalMap;
-
-uniform layout(location = 5) vec4 light1;
-uniform layout(location = 6) vec4 light2;
-uniform layout(location = 7) vec4 movingLight;
-
 uniform layout(location = 9) mat4 viewMatrix;
 uniform layout(location = 10) vec3 cameraPosition;
 
@@ -19,126 +12,122 @@ uniform layout(location = 15) int isNormal;
 
 uniform layout (location = 16) int isGrassStraw;
 
-uniform float ballRadius;
+uniform float time;
 
 in layout(location = 2) vec3 fragPosition;
-
 in layout(location = 3) mat3 TBN;
-
 in layout(location = 11) float grassHeight;
-in layout(location = 18) float time;
-in layout(location = 19) float wind;
-in layout(location = 20) float noiseValue;
-in layout(location = 21) vec2 textureAnimation;
-// in layout(location = 22) float shadowFactorGrass; 
+
 
 out vec4 color;
 
-float windStrength = 4.0;
+float windStrength = 5.0;
 
-float fade(float t) {
-    return t * t * t * (t * (t * 6.0 - 15.0) + 10.0);
+//	Classic Perlin 3D Noise 
+//	by Stefan Gustavson (https://github.com/stegu/webgl-noise)
+//
+vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
+vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
+vec3 fade(vec3 t) {return t*t*t*(t*(t*6.0-15.0)+10.0);}
+
+float cnoise(vec3 P){
+  vec3 Pi0 = floor(P); // Integer part for indexing
+  vec3 Pi1 = Pi0 + vec3(1.0); // Integer part + 1
+  Pi0 = mod(Pi0, 289.0);
+  Pi1 = mod(Pi1, 289.0);
+  vec3 Pf0 = fract(P); // Fractional part for interpolation
+  vec3 Pf1 = Pf0 - vec3(1.0); // Fractional part - 1.0
+  vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
+  vec4 iy = vec4(Pi0.yy, Pi1.yy);
+  vec4 iz0 = Pi0.zzzz;
+  vec4 iz1 = Pi1.zzzz;
+
+  vec4 ixy = permute(permute(ix) + iy);
+  vec4 ixy0 = permute(ixy + iz0);
+  vec4 ixy1 = permute(ixy + iz1);
+
+  vec4 gx0 = ixy0 / 7.0;
+  vec4 gy0 = fract(floor(gx0) / 7.0) - 0.5;
+  gx0 = fract(gx0);
+  vec4 gz0 = vec4(0.5) - abs(gx0) - abs(gy0);
+  vec4 sz0 = step(gz0, vec4(0.0));
+  gx0 -= sz0 * (step(0.0, gx0) - 0.5);
+  gy0 -= sz0 * (step(0.0, gy0) - 0.5);
+
+  vec4 gx1 = ixy1 / 7.0;
+  vec4 gy1 = fract(floor(gx1) / 7.0) - 0.5;
+  gx1 = fract(gx1);
+  vec4 gz1 = vec4(0.5) - abs(gx1) - abs(gy1);
+  vec4 sz1 = step(gz1, vec4(0.0));
+  gx1 -= sz1 * (step(0.0, gx1) - 0.5);
+  gy1 -= sz1 * (step(0.0, gy1) - 0.5);
+
+  vec3 g000 = vec3(gx0.x,gy0.x,gz0.x);
+  vec3 g100 = vec3(gx0.y,gy0.y,gz0.y);
+  vec3 g010 = vec3(gx0.z,gy0.z,gz0.z);
+  vec3 g110 = vec3(gx0.w,gy0.w,gz0.w);
+  vec3 g001 = vec3(gx1.x,gy1.x,gz1.x);
+  vec3 g101 = vec3(gx1.y,gy1.y,gz1.y);
+  vec3 g011 = vec3(gx1.z,gy1.z,gz1.z);
+  vec3 g111 = vec3(gx1.w,gy1.w,gz1.w);
+
+  vec4 norm0 = taylorInvSqrt(vec4(dot(g000, g000), dot(g010, g010), dot(g100, g100), dot(g110, g110)));
+  g000 *= norm0.x;
+  g010 *= norm0.y;
+  g100 *= norm0.z;
+  g110 *= norm0.w;
+  vec4 norm1 = taylorInvSqrt(vec4(dot(g001, g001), dot(g011, g011), dot(g101, g101), dot(g111, g111)));
+  g001 *= norm1.x;
+  g011 *= norm1.y;
+  g101 *= norm1.z;
+  g111 *= norm1.w;
+
+  float n000 = dot(g000, Pf0);
+  float n100 = dot(g100, vec3(Pf1.x, Pf0.yz));
+  float n010 = dot(g010, vec3(Pf0.x, Pf1.y, Pf0.z));
+  float n110 = dot(g110, vec3(Pf1.xy, Pf0.z));
+  float n001 = dot(g001, vec3(Pf0.xy, Pf1.z));
+  float n101 = dot(g101, vec3(Pf1.x, Pf0.y, Pf1.z));
+  float n011 = dot(g011, vec3(Pf0.x, Pf1.yz));
+  float n111 = dot(g111, Pf1);
+
+  vec3 fade_xyz = fade(Pf0);
+  vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
+  vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
+  float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x); 
+  return 2.2 * n_xyz;
 }
-
-float grad(int hash, float x, float y, float z) {
-    int h = hash & 15;
-    float u = h < 8 ? x : y;
-    float v = h < 4 ? y : h == 12 || h == 14 ? x : z;
-    return ((h & 1) == 0 ? u : -u) + ((h & 2) == 0 ? v : -v);
-}
-
-float perlinNoise(vec3 p) {
-    vec3 Pi = floor(p);
-    vec3 Pf = fract(p);
-
-    vec3 fadePf = vec3(fade(Pf.x), fade(Pf.y), fade(Pf.z));
-
-    int A = int(Pi.x) + int(Pi.y) * 57 + int(Pi.z) * 113;
-    int AA = A + 1;
-    int AB = A + 57;
-    int BA = A + 113;
-    int BB = A + 170;
-
-    float res = mix(
-        mix(
-            mix(grad(A, Pf.x, Pf.y, Pf.z), grad(AA, Pf.x - 1.0, Pf.y, Pf.z), fadePf.x),
-            mix(grad(AB, Pf.x, Pf.y - 1.0, Pf.z), grad(AA + 57, Pf.x - 1.0, Pf.y - 1.0, Pf.z), fadePf.x),
-            fadePf.y
-        ),
-        mix(
-            mix(grad(BA, Pf.x, Pf.y, Pf.z - 1.0), grad(BB, Pf.x - 1.0, Pf.y, Pf.z - 1.0), fadePf.x),
-            mix(grad(AB + 113, Pf.x, Pf.y - 1.0, Pf.z - 1.0), grad(BB + 57, Pf.x - 1.0, Pf.y - 1.0, Pf.z - 1.0), fadePf.x),
-            fadePf.y
-        ),
-        fadePf.z
-    );
-
-    return res;
-}
+// End of perlin noise code
 
 
 void main()
 {
 
     if(isGrassStraw == 1){
-        vec3 baseColor = vec3(0.0, 0.4, 0.0); // Mørkere grønn for lavere høyder
-        vec3 topColor = vec3(0.0, 0.8, 0.0); // Lysere grønn for høyere høyder
+        vec3 baseColor = vec3(0.0, 0.4, 0.0); 
+        vec3 topColor = vec3(0.0, 0.8, 0.0); 
 
-        // Interpoler mellom baseColor og topColor basert på høyden
-        float heightFactor = clamp(grassHeight, 0.0, 1.0); // Normaliser høyden til området [0, 1]
+        // Interpolate between baseColor and topColor based on grassHeight
+        float heightFactor = clamp(grassHeight, 0.0, 1.0); // Normalises the height in the range [0, 1]
         vec3 green = mix(baseColor, topColor, heightFactor);
-
-        // Forsterk fargeforskjellen ytterligere
         green = green * (grassHeight * 0.5 + 0.5);
 
 
-        // vec3 green = vec3(0.0, 0.6, 0.0);
-        // green = green * (grassHeight*0.3 + 0.5);
-
-        vec3 shadowPosition = vec3(fragPosition.x + time * (windStrength * 0.5), fragPosition.z, fragPosition.y * 0.3); // Skyggens globale posisjon
-        float shadowFactorGrass = perlinNoise(shadowPosition *0.07); // Perlin noise brukes for å lage et organisk mønster. Bruker shadowposition for å beregne mønsteret. Time får det til å bevege seg. 
-        //Det siste tallet bestemmer størrelsen. Lavere = større mønster. Høyere = mindre, mer detaljert mønster.
-        // shadowFactor += perlinNoise(shadowPosition *0.1); // Legger til et annet lag av Perlin noise for mer kompleksitet
+        vec3 shadowPosition = vec3(fragPosition.x + time * (windStrength * 0.5), fragPosition.z, fragPosition.y * 0.3); // The shadow's global position
+        float shadowFactorGrass = cnoise(shadowPosition *0.07); 
+        // Lowwer = larger pattern. Higher = smaller, more detailed pattern.
     
-        shadowFactorGrass = 1.0 - shadowFactorGrass;
-
-        // shadowFactor = clamp(shadowFactor, 0.0, 1.0); // Sørg for at verdiene er i området [0, 1]
-        shadowFactorGrass = smoothstep(0.2, 0.7, shadowFactorGrass);
+        shadowFactorGrass = 1.0 - shadowFactorGrass; // Inverting
+        shadowFactorGrass = smoothstep(0.2, 0.7, shadowFactorGrass); // Smoothstep for a smoother transition between shadow and green
         
-        vec3 shadow = green * 0.5; // skyggen er 5% av grønnfargen. Lavere = mørkere skygge
-
+        vec3 shadow = green * 0.5; 
         vec3 mixColour = mix(shadow, green, shadowFactorGrass);
-
-        // Når shadowFactorGrass = 0.0, brukes kun shadow (full skygge).
-        // Når shadowFactorGrass = 1.0, brukes kun green (ingen skygge).
-        // Når shadowFactorGrass er mellom 0.0 og 1.0, blir resultatet en blanding av shadow og green.
-
-        //color = green * shadowFactorGrass;
-
-        // float normalizedTime = mod(time, 10.0) / 10.0; // Normaliser `time` til området [0, 1]
-        // float normalizedWind = wind * 0.5 + 0.5; // Normaliser `wind` til området [0, 1]
-        // color = vec4(vec3(normalizedWind), 1.0);
-        // //color = vec4(normalizedTime, normalizedWind, 0.0, 1.0); // Bruk rød for `time` og grønn for `wind`
-
-        // // float normalizedNoise = noiseValue * 0.5 + 0.5; // Normaliser til området [0, 1]
-        // // color = vec4(vec3(normalizedNoise), 1.0); // Visualiser støyen som en gråtone
-        
-        // // float normalizedX = fract(instanceOffsetX * 0.1); // Juster skalaen etter behov
-        // // float normalizedZ = fract(instanceOffsetZ * 0.1); // Juster skalaen etter behov
-
-        // // color = vec4(normalizedX, normalizedZ, 0.0, 1.0); // Rød = X, Grønn = Z
-        float normalizedHeight = clamp(grassHeight, 0.0, 2.0);
-        float alpha = mix(0.2, 1.0, normalizedHeight); // Alpha går fra 0.0 (bunn) til 1.0 (topp)
         
         color.rgb = mixColour;
         color.a = 1.0;
         return;
     }
 
-    // Combine ambient, diffuse and specular 
-    // color = vec4(ambient + diffuse + specular, 1.0) * diffuseColor + dither;
-    color = vec4(0.18, 0.10, 0.00, 1.0); // brown
-    // color = vec4(0.0, 0.2, 0.0, 1.0); // green
-
+    color = vec4(0.36, 0.25, 0.20, 1.0); // brown color to resemble soil
 
 }
