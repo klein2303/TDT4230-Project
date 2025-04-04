@@ -31,10 +31,9 @@ enum KeyFrameAction
 
 double padPositionX = 0.0;
 double padPositionZ = 0.0;
-double padPositionY = 2.0;
-
+double padPositionY = 0.6; // camera initial height
 float yaw = 0.0;
-float pitch = 0.3;
+float pitch = 0.2; // camera initial pitch
 
 unsigned int currentKeyFrame = 0;
 unsigned int previousKeyFrame = 0;
@@ -51,7 +50,6 @@ PNGImage skyboxDown = loadPNGFile("../res/cubemap2/down.png");
 PNGImage skyboxFront = loadPNGFile("../res/cubemap2/front.png");
 PNGImage skyboxBack = loadPNGFile("../res/cubemap2/back.png");
 
-// Rekkefølgen må være slik:
 PNGImage cubemap_images[] = {
     skyboxRight,
     skyboxLeft,
@@ -174,25 +172,22 @@ void initGame(GLFWwindow *window, CommandLineOptions gameOptions)
     boxNode->vertexArrayObjectID = boxVAO;
     boxNode->VAOIndexCount = box.indices.size();
     boxNode->nodeType = CUBE_MAP;
-
     boxNode->textureID = cubemapID(cubemap_images);
-    std::cout << "Skybox Texture ID: " << boxNode->textureID << std::endl;
 
     padNode->vertexArrayObjectID = padVAO;
     padNode->VAOIndexCount = pad.indices.size();
-    padNode->position = glm::vec3(0.0f, 0.0f, 0.0f); // Juster posisjonen etter behov
+    padNode->position = glm::vec3(0.0f, 0.0f, 0.0f); 
 
     grassNode->vertexArrayObjectID = grassVAO;
     grassNode->VAOIndexCount = grass.indices.size();
     grassNode->nodeType = GRASS;
-    grassNode->position = glm::vec3(0.0f, 0.0f, 0.0f); // Juster posisjonen etter behov
+    grassNode->position = glm::vec3(0.0f, 0.0f, 0.0f); 
 
 
     getTimeDeltaSeconds();
 
     std::cout << fmt::format("IniticurrentTransformationMatrixalized scene with {} SceneNodes.", totalChildren(rootNode)) << std::endl;
 
-    std::cout << "pad VAO: " << padNode->vertexArrayObjectID << ", Index Count: " << padNode->VAOIndexCount << std::endl;
 }
 
 void handleKeyboardInput(GLFWwindow *window, double deltaTime)
@@ -258,7 +253,7 @@ void updateFrame(GLFWwindow *window)
 
     glm::vec3 cameraPosition = glm::vec3(padPositionX, padPositionY, padPositionZ);
 
-    // Some math to make the camera move in a nice way
+    // camera handling
     float lookRotation = -0.6 / (1 + exp(-5 * (padPositionX - 0.5))) + 0.3;
     glm::mat4 cameraTransform =
         glm::rotate(pitch, glm::vec3(1, 0, 0)) *
@@ -301,7 +296,7 @@ void updateNodeTransformations(SceneNode *node, glm::mat4 transformationThusFar,
 
 void renderNode(SceneNode *node)
 {
-    // activate shader that matches the object
+    // activate the shader that matches the object
     node->shader->activate();
 
     glUniformMatrix4fv(3, 1, GL_FALSE, glm::value_ptr(node->currentTransformationMatrix));
