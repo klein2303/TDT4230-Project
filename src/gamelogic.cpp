@@ -154,7 +154,7 @@ void initGame(GLFWwindow *window, CommandLineOptions gameOptions)
     // Create meshes
     Mesh pad = cube(padDimensions, glm::vec2(30, 40), true);
     Mesh box = cube(boxDimensions, glm::vec2(90), true, true);
-    Mesh grass = grassStraw();
+    Mesh grass = grassBlade();
 
     // Fill buffers
     unsigned int padVAO = generateBuffer(pad);

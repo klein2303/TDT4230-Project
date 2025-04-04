@@ -52,10 +52,3 @@ SceneNode* createTextureNode(int textureID, Gloom::Shader* shader) {
 	node->is2D = 1; // Sett is2D til 1
 	return node;
 }
-
-// # Lag createGrassNode
-// SceneNode* createGrassNode() {
-// 	SceneNode* node = createSceneNode();
-// 	node->nodeType = GRASS; // Sett nodetype til GRASS
-// 	return node;
-// };

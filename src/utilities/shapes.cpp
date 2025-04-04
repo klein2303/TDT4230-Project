@@ -208,7 +208,7 @@ Mesh generateSphere(float sphereRadius, int slices, int layers) {
 }
 
 
-Mesh grassStraw() {
+Mesh grassBlade() {
     Mesh mesh;
 
     // Points for the traingles
