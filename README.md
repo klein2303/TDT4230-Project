@@ -6,11 +6,7 @@ This is a project I made for TDT4230 - Graphics and Visualization Project. In th
 
 ## What do i do?
 
-	git clone --recursive https://github.com/bartvbl/TDT4230-Assignment-1.git
-
-Should you forget the `--recursive` bit, just run:
-
-	git submodule update --init
+	git clone https://github.com/klein2303/TDT4230-Project 
 
 
 ### Windows
